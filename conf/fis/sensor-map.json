@@ -1,0 +1,54 @@
+{
+    "res": {
+        "sensor:page/index.tpl": {
+            "uri": "sensor/page/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/sensor/page/index.tpl"
+        },
+        "sensor:page/layout.tpl": {
+            "uri": "sensor/page/layout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/sensor/page/layout.tpl"
+        },
+        "sensor:static/js/bigpipe.js": {
+            "uri": "/static/sensor/static/js/bigpipe.js",
+            "type": "js",
+            "subpath": "/static/sensor/static/js/bigpipe.js"
+        },
+        "sensor:static/js/index.js": {
+            "uri": "/static/sensor/static/js/index.js",
+            "type": "js",
+            "subpath": "/static/sensor/static/js/index.js"
+        },
+        "sensor:static/js/lazyload.js": {
+            "uri": "/static/sensor/static/js/lazyload.js",
+            "type": "js",
+            "subpath": "/static/sensor/static/js/lazyload.js"
+        },
+        "sensor:static/js/mod.js": {
+            "uri": "/static/sensor/static/js/mod.js",
+            "type": "js",
+            "subpath": "/static/sensor/static/js/mod.js"
+        },
+        "sensor:static/js/page.js": {
+            "uri": "/static/sensor/static/js/page.js",
+            "type": "js",
+            "deps": [
+                "sensor:static/js/bigpipe.js"
+            ],
+            "subpath": "/static/sensor/static/js/page.js"
+        },
+        "sensor:widget/message/message.tpl": {
+            "uri": "sensor/widget/message/message.tpl",
+            "type": "tpl",
+            "subpath": "/views/sensor/widget/message/message.tpl"
+        }
+    },
+    "pkg": {}
+}

@@ -1,0 +1,4 @@
+::ffff:127.0.0.1 - - [25/Nov/2017:10:18:13 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 40.965
+::ffff:127.0.0.1 - - [25/Nov/2017:10:44:35 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 18.345
+::ffff:127.0.0.1 - - [25/Nov/2017:10:53:19 ] "GET / HTTP/1.1" 500 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 16.421
+::ffff:127.0.0.1 - - [25/Nov/2017:10:53:20 ] "GET /favicon.ico HTTP/1.1" 404 24 http://127.0.0.1:8000/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36 1.502

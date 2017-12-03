@@ -1,0 +1,3 @@
+::1 - - [23/Sep/2017:13:31:58 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 72.269
+::1 - - [23/Sep/2017:13:45:53 ] "GET /sensor/time HTTP/1.1" 200 7 - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 4.481
+::1 - - [23/Sep/2017:13:45:53 ] "GET /favicon.ico HTTP/1.1" 404 24 http://localhost:8000/sensor/time - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 2.981

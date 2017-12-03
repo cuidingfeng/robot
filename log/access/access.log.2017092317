@@ -1,0 +1,5 @@
+::1 - - [23/Sep/2017:17:41:22 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 43.399
+::1 - - [23/Sep/2017:17:41:34 ] "GET /home/start?status=start HTTP/1.1" 304 - http://localhost:8000/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 2.618
+::1 - - [23/Sep/2017:17:43:05 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 56.921
+::1 - - [23/Sep/2017:17:43:08 ] "GET /home/start?status=start HTTP/1.1" 304 - http://localhost:8000/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 19.767
+::1 - - [23/Sep/2017:17:43:53 ] "GET /home/start?status=end HTTP/1.1" 304 - http://localhost:8000/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 1.921

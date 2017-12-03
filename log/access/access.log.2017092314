@@ -1,0 +1,8 @@
+::1 - - [23/Sep/2017:14:19:41 ] "GET /sensor/time HTTP/1.1" 500 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 13.407
+::1 - - [23/Sep/2017:14:27:08 ] "GET /sensor/time HTTP/1.1" 500 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 10.336
+::1 - - [23/Sep/2017:14:27:52 ] "GET /sensor/time HTTP/1.1" 500 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 38.102
+::1 - - [23/Sep/2017:14:30:36 ] "GET /sensor/time HTTP/1.1" 200 7 - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 6.791
+::1 - - [23/Sep/2017:14:39:30 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 16.581
+::1 - - [23/Sep/2017:14:39:43 ] "GET /home/start HTTP/1.1" 200 2 http://localhost:8000/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 1.771
+::1 - - [23/Sep/2017:14:40:40 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 47.539
+::1 - - [23/Sep/2017:14:40:44 ] "GET /home/start HTTP/1.1" 304 - http://localhost:8000/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36 4.100

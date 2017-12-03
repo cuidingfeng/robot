@@ -1,0 +1,10 @@
+.flex{
+    display: flex
+}
+.leftbox{
+    width: 300px;
+    flex: 1;
+}
+.rightbox{
+    flex: 3;
+}

@@ -1,0 +1,3 @@
+::ffff:127.0.0.1 - - [03/Dec/2017:20:50:01 ] "POST /home/sensor/save_event HTTP/1.1" 200 432 http://127.0.0.1:8000/home/sensor/view?id=27 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36 7.779
+::ffff:127.0.0.1 - - [03/Dec/2017:20:50:01 ] "GET /home/sensor/view?id=27 HTTP/1.1" 200 - http://127.0.0.1:8000/home/sensor/view?id=27 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36 7.840
+::ffff:127.0.0.1 - - [03/Dec/2017:20:50:16 ] "GET /home/sensor/view?id=27 HTTP/1.1" 200 - http://127.0.0.1:8000/home/sensor/view?id=27 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36 2.619
