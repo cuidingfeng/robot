@@ -1,10 +1,10 @@
 define('home:components/Lodash/assign.js', function(require, exports, module) {
 
   var assignValue = require('home:components/Lodash/_assignValue.js'),
-      copyObject = require('./_copyObject'),
-      createAssigner = require('./_createAssigner'),
+      copyObject = require('home:components/Lodash/_copyObject.js'),
+      createAssigner = require('home:components/Lodash/_createAssigner.js'),
       isArrayLike = require('home:components/Lodash/isArrayLike.js'),
-      isPrototype = require('./_isPrototype'),
+      isPrototype = require('home:components/Lodash/_isPrototype.js'),
       keys = require('home:components/Lodash/keys.js');
   
   /** Used for built-in method references. */

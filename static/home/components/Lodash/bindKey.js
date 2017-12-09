@@ -1,8 +1,8 @@
 define('home:components/Lodash/bindKey.js', function(require, exports, module) {
 
-  var createWrapper = require('./_createWrapper'),
-      getPlaceholder = require('./_getPlaceholder'),
-      replaceHolders = require('./_replaceHolders'),
+  var createWrapper = require('home:components/Lodash/_createWrapper.js'),
+      getPlaceholder = require('home:components/Lodash/_getPlaceholder.js'),
+      replaceHolders = require('home:components/Lodash/_replaceHolders.js'),
       rest = require('home:components/Lodash/rest.js');
   
   /** Used to compose bitmasks for wrapper metadata. */

@@ -1,7 +1,7 @@
 define('home:components/Lodash/assignInWith.js', function(require, exports, module) {
 
-  var copyObjectWith = require('./_copyObjectWith'),
-      createAssigner = require('./_createAssigner'),
+  var copyObjectWith = require('home:components/Lodash/_copyObjectWith.js'),
+      createAssigner = require('home:components/Lodash/_createAssigner.js'),
       keysIn = require('home:components/Lodash/keysIn.js');
   
   /**

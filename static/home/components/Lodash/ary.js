@@ -1,6 +1,6 @@
 define('home:components/Lodash/ary.js', function(require, exports, module) {
 
-  var createWrapper = require('./_createWrapper');
+  var createWrapper = require('home:components/Lodash/_createWrapper.js');
   
   /** Used to compose bitmasks for wrapper metadata. */
   var ARY_FLAG = 128;

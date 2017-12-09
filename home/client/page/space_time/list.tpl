@@ -2,6 +2,6 @@
 
 {% block content %}
      <div id="pages-container">
-        {% widget "home:widget/index/index.tpl"%}
+        {% widget "home:widget/robot/list.tpl"%}
      </div>
-{% require "home:page/index.tpl" %}{% endblock %}
+{% endblock %}

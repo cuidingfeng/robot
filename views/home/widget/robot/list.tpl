@@ -8,7 +8,7 @@
     </tr>
     {% for key, row in rows %}
     <tr>
-        <td>{{ row.id }}</td>
+        <td>{{ row.robotId }}</td>
         <td>{{ row.title }}</td>
         <td>{{ row.uri }}</td>
         <td>{{ row.stype }}</td>

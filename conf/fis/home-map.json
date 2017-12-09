@@ -1837,7 +1837,7 @@
             "uri": "/static/home/components/Lodash/after.js",
             "type": "js",
             "deps": [
-                "./toInteger"
+                "home:components/Lodash/toInteger.js"
             ],
             "subpath": "/static/home/components/Lodash/after.js"
         },
@@ -1915,7 +1915,7 @@
             "uri": "/static/home/components/Lodash/ary.js",
             "type": "js",
             "deps": [
-                "./_createWrapper"
+                "home:components/Lodash/_createWrapper.js"
             ],
             "subpath": "/static/home/components/Lodash/ary.js"
         },
@@ -1924,10 +1924,10 @@
             "type": "js",
             "deps": [
                 "home:components/Lodash/_assignValue.js",
-                "./_copyObject",
-                "./_createAssigner",
+                "home:components/Lodash/_copyObject.js",
+                "home:components/Lodash/_createAssigner.js",
                 "home:components/Lodash/isArrayLike.js",
-                "./_isPrototype",
+                "home:components/Lodash/_isPrototype.js",
                 "home:components/Lodash/keys.js"
             ],
             "subpath": "/static/home/components/Lodash/assign.js"
@@ -1937,10 +1937,10 @@
             "type": "js",
             "deps": [
                 "home:components/Lodash/_assignValue.js",
-                "./_copyObject",
-                "./_createAssigner",
+                "home:components/Lodash/_copyObject.js",
+                "home:components/Lodash/_createAssigner.js",
                 "home:components/Lodash/isArrayLike.js",
-                "./_isPrototype",
+                "home:components/Lodash/_isPrototype.js",
                 "home:components/Lodash/keysIn.js"
             ],
             "subpath": "/static/home/components/Lodash/assignIn.js"
@@ -1949,8 +1949,8 @@
             "uri": "/static/home/components/Lodash/assignInWith.js",
             "type": "js",
             "deps": [
-                "./_copyObjectWith",
-                "./_createAssigner",
+                "home:components/Lodash/_copyObjectWith.js",
+                "home:components/Lodash/_createAssigner.js",
                 "home:components/Lodash/keysIn.js"
             ],
             "subpath": "/static/home/components/Lodash/assignInWith.js"
@@ -1959,8 +1959,8 @@
             "uri": "/static/home/components/Lodash/assignWith.js",
             "type": "js",
             "deps": [
-                "./_copyObjectWith",
-                "./_createAssigner",
+                "home:components/Lodash/_copyObjectWith.js",
+                "home:components/Lodash/_createAssigner.js",
                 "home:components/Lodash/keys.js"
             ],
             "subpath": "/static/home/components/Lodash/assignWith.js"
@@ -1997,9 +1997,9 @@
             "uri": "/static/home/components/Lodash/bind.js",
             "type": "js",
             "deps": [
-                "./_createWrapper",
-                "./_getPlaceholder",
-                "./_replaceHolders",
+                "home:components/Lodash/_createWrapper.js",
+                "home:components/Lodash/_getPlaceholder.js",
+                "home:components/Lodash/_replaceHolders.js",
                 "home:components/Lodash/rest.js"
             ],
             "subpath": "/static/home/components/Lodash/bind.js"
@@ -2019,9 +2019,9 @@
             "uri": "/static/home/components/Lodash/bindKey.js",
             "type": "js",
             "deps": [
-                "./_createWrapper",
-                "./_getPlaceholder",
-                "./_replaceHolders",
+                "home:components/Lodash/_createWrapper.js",
+                "home:components/Lodash/_getPlaceholder.js",
+                "home:components/Lodash/_replaceHolders.js",
                 "home:components/Lodash/rest.js"
             ],
             "subpath": "/static/home/components/Lodash/bindKey.js"
@@ -7934,6 +7934,14 @@
             ],
             "subpath": "/static/home/components/Lodash/zipWith.js"
         },
+        "home:page/index.tpl": {
+            "uri": "home/page/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/index.tpl"
+        },
         "home:page/layout.tpl": {
             "uri": "home/page/layout.tpl",
             "type": "tpl",
@@ -7941,6 +7949,30 @@
                 "isPage": true
             },
             "subpath": "/views/home/page/layout.tpl"
+        },
+        "home:page/robot/create.tpl": {
+            "uri": "home/page/robot/create.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/robot/create.tpl"
+        },
+        "home:page/robot/list.tpl": {
+            "uri": "home/page/robot/list.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/robot/list.tpl"
+        },
+        "home:page/robot/view.tpl": {
+            "uri": "home/page/robot/view.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/robot/view.tpl"
         },
         "home:page/sensor/create.tpl": {
             "uri": "home/page/sensor/create.tpl",
@@ -8007,10 +8039,71 @@
             ],
             "subpath": "/static/home/static/js/page.js"
         },
+        "home:widget/index/index.css": {
+            "uri": "/static/home/widget/index/index.css",
+            "type": "css",
+            "subpath": "/static/home/widget/index/index.css"
+        },
+        "home:widget/index/index.js": {
+            "uri": "/static/home/widget/index/index.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js",
+                "home:widget/index/index.css"
+            ],
+            "subpath": "/static/home/widget/index/index.js"
+        },
+        "home:widget/index/index.tpl": {
+            "uri": "home/widget/index/index.tpl",
+            "type": "tpl",
+            "deps": [
+                "timespace",
+                "home:widget/index/index.js",
+                "home:widget/index/index.css"
+            ],
+            "subpath": "/views/home/widget/index/index.tpl"
+        },
         "home:widget/message/message.tpl": {
             "uri": "home/widget/message/message.tpl",
             "type": "tpl",
             "subpath": "/views/home/widget/message/message.tpl"
+        },
+        "home:widget/robot/create.js": {
+            "uri": "/static/home/widget/robot/create.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/robot/create.js"
+        },
+        "home:widget/robot/create.tpl": {
+            "uri": "home/widget/robot/create.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/robot/create.js"
+            ],
+            "subpath": "/views/home/widget/robot/create.tpl"
+        },
+        "home:widget/robot/list.tpl": {
+            "uri": "home/widget/robot/list.tpl",
+            "type": "tpl",
+            "subpath": "/views/home/widget/robot/list.tpl"
+        },
+        "home:widget/robot/view.js": {
+            "uri": "/static/home/widget/robot/view.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/robot/view.js"
+        },
+        "home:widget/robot/view.tpl": {
+            "uri": "home/widget/robot/view.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/robot/view.js"
+            ],
+            "subpath": "/views/home/widget/robot/view.tpl"
         },
         "home:widget/sensor/create.js": {
             "uri": "/static/home/widget/sensor/create.js",
@@ -8077,50 +8170,51 @@
             "type": "js",
             "subpath": "/static/home/components/lodash/index.js"
         },
-        "home:page/robot/create.tpl": {
-            "uri": "home/page/robot/create.tpl",
+        "home:page/space_time/create.tpl": {
+            "uri": "home/page/space_time/create.tpl",
             "type": "tpl",
             "extras": {
                 "isPage": true
             },
-            "subpath": "/views/home/page/robot/create.tpl"
+            "subpath": "/views/home/page/space_time/create.tpl"
         },
-        "home:widget/robot/create.js": {
-            "uri": "/static/home/widget/robot/create.js",
+        "home:page/space_time/list.tpl": {
+            "uri": "home/page/space_time/list.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/list.tpl"
+        },
+        "home:page/space_time/view.tpl": {
+            "uri": "home/page/space_time/view.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/view.tpl"
+        },
+        "home:widget/space_time/index.css": {
+            "uri": "/static/home/widget/space_time/index.css",
+            "type": "css",
+            "subpath": "/static/home/widget/space_time/index.css"
+        },
+        "home:widget/space_time/index.js": {
+            "uri": "/static/home/widget/space_time/index.js",
             "type": "js",
             "deps": [
-                "home:components/jquery/jquery.js"
+                "home:components/jquery/jquery.js",
+                "home:widget/space_time/index.css"
             ],
-            "subpath": "/static/home/widget/robot/create.js"
+            "subpath": "/static/home/widget/space_time/index.js"
         },
-        "home:widget/robot/create.tpl": {
-            "uri": "home/widget/robot/create.tpl",
+        "home:widget/space_time/create.tpl": {
+            "uri": "home/widget/space_time/create.tpl",
             "type": "tpl",
             "deps": [
-                "home:widget/robot/create.js"
+                "create"
             ],
-            "subpath": "/views/home/widget/robot/create.tpl"
-        },
-        "home:widget/robot/list.tpl": {
-            "uri": "home/widget/robot/list.tpl",
-            "type": "tpl",
-            "subpath": "/views/home/widget/robot/list.tpl"
-        },
-        "home:widget/robot/view.js": {
-            "uri": "/static/home/widget/robot/view.js",
-            "type": "js",
-            "deps": [
-                "home:components/jquery/jquery.js"
-            ],
-            "subpath": "/static/home/widget/robot/view.js"
-        },
-        "home:widget/robot/view.tpl": {
-            "uri": "home/widget/robot/view.tpl",
-            "type": "tpl",
-            "deps": [
-                "home:widget/robot/view.js"
-            ],
-            "subpath": "/views/home/widget/robot/view.tpl"
+            "subpath": "/views/home/widget/space_time/create.tpl"
         }
     },
     "pkg": {}

@@ -1,6 +1,6 @@
 define('home:components/Lodash/after.js', function(require, exports, module) {
 
-  var toInteger = require('./toInteger');
+  var toInteger = require('home:components/Lodash/toInteger.js');
   
   /** Used as the `TypeError` message for "Functions" methods. */
   var FUNC_ERROR_TEXT = 'Expected a function';
