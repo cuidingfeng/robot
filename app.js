@@ -13,7 +13,7 @@ var app = yog.bootstrap({
     console.log('plugins load completed');
 });
 
-app.set('port', process.env.PORT || 8000);
+app.set('port', process.env.PORT || 8001);
 app.disable('x-powered-by');
 
 var server = yog.server = app.listen(app.get('port'), function () {

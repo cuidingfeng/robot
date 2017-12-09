@@ -18,7 +18,7 @@ if (fis.IS_FIS3) {
         optimizer: null,
         useHash: false,
         deploy: fis.plugin('http-push', {
-            receiver: 'http://127.0.0.1:8000/yog/upload',
+            receiver: 'http://127.0.0.1:8001/yog/upload',
             to: '/'
         })
     });

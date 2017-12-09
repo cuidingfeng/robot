@@ -1,34 +1,34 @@
-<h1>传感器详情</h1>
-<p class="msg">传感器开发者在这里查看，设置传感器需要用户填的属性和支持的事件</p>
+<h1>机器人详情</h1>
+<p class="msg">机器人开发者在这里查看，设置机器人需要用户填的属性和支持的事件</p>
 
 <div class="fromone">
-<label>传感器名称：</label>
-{{ sensor.title }}
+<label>机器人名称：</label>
+{{ robot.title }}
 </div>
 
 <div class="fromone">
-<label>传感器唯一标识：</label>
-{{ sensor.uri }}
+<label>机器人唯一标识：</label>
+{{ robot.robotId }}
 </div>
 
 <div class="fromone">
-<label>传感器通信协议：</label>
-{{ sensor.stype }}
+<label>机器人通信协议：</label>
+{{ robot.stype }}
 </div>
 
 <div class="fromone">
-<label>传感器介绍说明：</label>
-{{ sensor.info }}
+<label>机器人介绍说明：</label>
+{{ robot.info }}
 </div>
 
 <div class="fromone">
 <label>通信URI：</label>
-http://127.0.0.1:8000/sensor/{{ sensor.id }}
+{{ robot.uri }}
 </div>
 
 <div class="fromone">
 <label>密匙：</label>
-secretKey={{ sensor.secretkey }}
+secretKey={{ robot.secretkey }}
 </div>
 
 
@@ -126,5 +126,5 @@ secretKey={{ sensor.secretkey }}
 </table>
 
 {% script %}
-require("view")( {{ sensor.id }} )
+require("view")( {{ robot.id }} )
 {% endscript %}

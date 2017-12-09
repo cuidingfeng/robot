@@ -1,8 +1,8 @@
 const $ = require("jquery");
-let sensorId;
+let robotId;
 
 module.exports = function(id){
-    sensorId = id;
+    robotId = id;
 }
 
 $("#addAttr").click(function(){
@@ -11,14 +11,14 @@ $("#addAttr").click(function(){
         value = $("#attr_value").val(),
         info = $("#attr_info").val(),
         post_data = {
-            sensor_id: sensorId,
+            robot_id: robotId,
             title: title,
             attr_name: attr_name,
             value: value,
             info: info
         };
 
-    $.ajax("/home/sensor/save_attr", {
+    $.ajax("/home/robot/save_attr", {
         data: post_data,
         dataType: "json",
         type: "post"
@@ -37,14 +37,14 @@ $("#addEvent").click(function(){
         value = $("#event_value").val(),
         info = $("#event_info").val(),
         post_data = {
-            sensor_id: sensorId,
+            robot_id: robotId,
             title: title,
             event_name: event_name,
             value: value,
             info: info
         };
 
-    $.ajax("/home/sensor/save_event", {
+    $.ajax("/home/robot/save_event", {
         data: post_data,
         dataType: "json",
         type: "post"
