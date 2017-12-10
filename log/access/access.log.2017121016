@@ -1,0 +1,4 @@
+::ffff:127.0.0.1 - - [10/Dec/2017:16:19:27 ] "GET /home/ HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 54.838
+::ffff:127.0.0.1 - - [10/Dec/2017:16:19:45 ] "GET /home/space_time/list HTTP/1.1" 404 33 http://127.0.0.1:8001/home/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.194
+::ffff:127.0.0.1 - - [10/Dec/2017:16:19:45 ] "GET /favicon.ico HTTP/1.1" 404 24 http://127.0.0.1:8001/home/space_time/list - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 0.773
+::ffff:127.0.0.1 - - [10/Dec/2017:16:19:47 ] "GET /home/space_time/create HTTP/1.1" 200 - http://127.0.0.1:8001/home/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.979

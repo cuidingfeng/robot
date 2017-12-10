@@ -15,6 +15,10 @@
         <td>
             <a href="./view?id={{row.id}}">查看详情</a>
             <a href="./edit?id={{row.id}}">编辑</a>
+
+            {% if req.query.type == 'select' %}
+                <a href="{{ decodeURIComponent(req.query.callback) }}&sensor_id={{ row.id }}">选择</a>
+            {% endif %}
         </td>
     </tr>
     {% endfor %}

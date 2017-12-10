@@ -7998,6 +7998,30 @@
             },
             "subpath": "/views/home/page/sensor/view.tpl"
         },
+        "home:page/space_time/create.tpl": {
+            "uri": "home/page/space_time/create.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/create.tpl"
+        },
+        "home:page/space_time/list.tpl": {
+            "uri": "home/page/space_time/list.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/list.tpl"
+        },
+        "home:page/space_time/view.tpl": {
+            "uri": "home/page/space_time/view.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/view.tpl"
+        },
         "home:page/timespace.tpl": {
             "uri": "home/page/timespace.tpl",
             "type": "tpl",
@@ -8142,6 +8166,19 @@
             ],
             "subpath": "/views/home/widget/sensor/view.tpl"
         },
+        "home:widget/space_time/create.tpl": {
+            "uri": "home/widget/space_time/create.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/space_time/create.js"
+            ],
+            "subpath": "/views/home/widget/space_time/create.tpl"
+        },
+        "home:widget/space_time/index.css": {
+            "uri": "/static/home/widget/space_time/index.css",
+            "type": "css",
+            "subpath": "/static/home/widget/space_time/index.css"
+        },
         "home:widget/timespace/timespace.css": {
             "uri": "/static/home/widget/timespace/timespace.css",
             "type": "css",
@@ -8170,51 +8207,58 @@
             "type": "js",
             "subpath": "/static/home/components/lodash/index.js"
         },
-        "home:page/space_time/create.tpl": {
-            "uri": "home/page/space_time/create.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/home/page/space_time/create.tpl"
-        },
-        "home:page/space_time/list.tpl": {
-            "uri": "home/page/space_time/list.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/home/page/space_time/list.tpl"
-        },
-        "home:page/space_time/view.tpl": {
-            "uri": "home/page/space_time/view.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/home/page/space_time/view.tpl"
-        },
-        "home:widget/space_time/index.css": {
-            "uri": "/static/home/widget/space_time/index.css",
-            "type": "css",
-            "subpath": "/static/home/widget/space_time/index.css"
-        },
-        "home:widget/space_time/index.js": {
-            "uri": "/static/home/widget/space_time/index.js",
+        "home:widget/space_time/create.js": {
+            "uri": "/static/home/widget/space_time/create.js",
             "type": "js",
             "deps": [
-                "home:components/jquery/jquery.js",
-                "home:widget/space_time/index.css"
+                "home:components/jquery/jquery.js"
             ],
-            "subpath": "/static/home/widget/space_time/index.js"
+            "subpath": "/static/home/widget/space_time/create.js"
         },
-        "home:widget/space_time/create.tpl": {
-            "uri": "home/widget/space_time/create.tpl",
+        "home:widget/space_time/list.tpl": {
+            "uri": "home/widget/space_time/list.tpl",
+            "type": "tpl",
+            "subpath": "/views/home/widget/space_time/list.tpl"
+        },
+        "home:widget/space_time/view.tpl": {
+            "uri": "home/widget/space_time/view.tpl",
             "type": "tpl",
             "deps": [
-                "create"
+                "home:widget/space_time/view.js"
             ],
-            "subpath": "/views/home/widget/space_time/create.tpl"
+            "subpath": "/views/home/widget/space_time/view.tpl"
+        },
+        "home:widget/space_time/view.js": {
+            "uri": "/static/home/widget/space_time/view.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/space_time/view.js"
+        },
+        "home:page/space_time/add_sensor.tpl": {
+            "uri": "home/page/space_time/add_sensor.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/add_sensor.tpl"
+        },
+        "home:widget/add_sensor/add_sensor.tpl": {
+            "uri": "home/widget/add_sensor/add_sensor.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/add_sensor/add_sensor.js"
+            ],
+            "subpath": "/views/home/widget/add_sensor/add_sensor.tpl"
+        },
+        "home:widget/add_sensor/add_sensor.js": {
+            "uri": "/static/home/widget/add_sensor/add_sensor.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/add_sensor/add_sensor.js"
         }
     },
     "pkg": {}

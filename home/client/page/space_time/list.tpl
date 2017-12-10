@@ -2,6 +2,6 @@
 
 {% block content %}
      <div id="pages-container">
-        {% widget "home:widget/robot/list.tpl"%}
+        {% widget "home:widget/space_time/list.tpl"%}
      </div>
 {% endblock %}

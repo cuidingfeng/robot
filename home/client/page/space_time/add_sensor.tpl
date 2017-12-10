@@ -2,6 +2,6 @@
 
 {% block content %}
      <div id="pages-container">
-        {% widget "home:widget/space_time/view.tpl"%}
+        {% widget "home:widget/add_sensor/add_sensor.tpl"%}
      </div>
 {% endblock %}

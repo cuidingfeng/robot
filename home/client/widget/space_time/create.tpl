@@ -18,5 +18,5 @@
 </div>
 
 {% script %}
-require("create");
+require("./create");
 {% endscript %}

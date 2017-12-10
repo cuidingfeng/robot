@@ -4,6 +4,12 @@
     font-size: 12px;
     color: rgb(156, 165, 28);
 }
+.msg2{
+    background: rgb(12, 224, 40);
+    padding: 0 8px;
+    font-size: 12px;
+    color: rgb(240, 241, 211);
+}
 .list{
     border-left: #aaa solid 1px;
     border-top: #aaa solid 1px;
@@ -34,5 +40,10 @@
     min-width: 50%;
     min-height: 6em;
     vertical-align: top;
+    margin: 10px 0;
+}
+.formBox{
+    border: rgb(144, 219, 58) solid 1px;
+    padding: 10px;
     margin: 10px 0;
 }

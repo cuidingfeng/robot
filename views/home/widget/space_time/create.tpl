@@ -18,5 +18,5 @@
 </div>
 
 {% script %}
-require("create");
+require("home:widget/space_time/create.js");
 {% endscript %}
