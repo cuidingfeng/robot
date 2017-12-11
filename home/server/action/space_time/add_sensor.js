@@ -1,23 +1,29 @@
 let space_time = require("../../model/space_time"),
-    util = require('../../lib/util'),
-    sensor = require("../../model/sensor");
-
+    util = require('../../lib/util');
+    
+/**
+ * 给时空添加传感器，query传进来时空id和传感器id，不存在就去选择，添加完成创建传感器实例，进入实例详情页
+ * @param {*} req 
+ * @param {*} res 
+ */
 module.exports.get = function (req, res) {
     const sensor_id = req.query.sensor_id,
         space_time_id = req.query.space_time_id;
 
     if (!sensor_id) {
         res.redirect('/home/sensor/list?type=select&callback=' + encodeURIComponent(req.originalUrl));
+        return;
     }
 
-    Promise.all([sensor.view(sensor_id), space_time.view(space_time_id)]).
-        then(function ([$sensor, $space_time]) {
-            res.render('home/page/space_time/add_sensor.tpl', {
-                sensor_id: sensor_id,
-                space_time_id: space_time_id,
-                sensor: $sensor.sensor[0],
-                sensor_attr: $sensor.attr,
-                space_time: $space_time.space_time[0]
-            });
-        });
+    if (!space_time_id) {
+        res.redirect('/home/space_time/list?type=select&callback=' + encodeURIComponent(req.originalUrl));
+        return;
+    }
+
+    space_time.save_sensor_case({
+        sid: sensor_id,
+        stid: space_time_id
+    }).then((data) => {
+        res.redirect('/home/space_time/view_sensor_case?scid=' + data.res.insertId );
+    });
 };

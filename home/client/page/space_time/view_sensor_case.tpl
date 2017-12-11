@@ -2,6 +2,6 @@
 
 {% block content %}
      <div id="pages-container">
-        {% widget "home:widget/add_sensor/add_sensor.tpl"%}
+        {% widget "home:widget/view_sensor_case/view_sensor_case.tpl"%}
      </div>
 {% endblock %}

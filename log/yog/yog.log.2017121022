@@ -174,3 +174,4 @@ TRACE: 17-12-10 22:12:50 [-:-] errno[0] logId[-] uri[-] user[-] refer[-] cookie[
 TRACE: 17-12-10 22:12:50 [-:-] errno[0] logId[-] uri[-] user[-] refer[-] cookie[-] custom[-]  [yog-ral] [cluster main][RalModule] load module from E:\git\robot\node_modules\node-ral\lib\ext/protocol/soapProtocol.js
 TRACE: 17-12-10 22:12:50 [-:-] errno[0] logId[-] uri[-] user[-] refer[-] cookie[-] custom[-]  [yog-ral] [cluster main][Config] load config from E:\git\robot\conf\ral\demo.js
 NOTICE: 17-12-10 22:12:50 [-:-] errno[0] logId[-] uri[-] user[-] refer[-] cookie[-] custom[-]  [yog-ral] [cluster main][Config] config auto update wase disabled
+NOTICE: 17-12-10 22:18:52 [-:-] errno[0] logId[-] uri[-] user[-] refer[-] cookie[-] custom[-]  Current eventLoop delay is 16

@@ -1,4 +1,4 @@
-define('home:widget/add_sensor/add_sensor.js', function(require, exports, module) {
+define('home:widget/view_sensor_case/add_sensor.js', function(require, exports, module) {
 
   const $ = require("home:components/jquery/jquery.js");
   let sensor_id, space_time_id, sensor_case_id;

@@ -41,4 +41,4 @@
 <button id="create_btn" class="formBtn">确定</button>
 
 
-{% script %} require("./add_sensor")( {{ sensor_id }}, {{ space_time_id }} ) {% endscript %}
+{% script %} require("home:widget/view_sensor_case/add_sensor.js")( {{ sensor_id }}, {{ space_time_id }} ) {% endscript %}
