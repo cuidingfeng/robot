@@ -103,11 +103,21 @@ module.exports.view = function (id) {
             conn.query(
                 'select * from space_time where id=?',
                 id
+            ),
+            conn.query(
+                'select *,sensor_case.id as scid  from sensor, sensor_case WHERE sensor_case.stid=? and sensor.id=sensor_case.sid order by sensor_case.id',
+                id
+            ),
+            conn.query(
+                'select sensor_case_attr.*, sensor_attr.*, sensor_case_attr.value as case_value  from sensor_case_attr, sensor_case, sensor_attr WHERE sensor_case.stid=? and sensor_case_attr.scid=sensor_case.id and sensor_attr.id=sensor_case_attr.said order by sensor_case_attr.scid',
+                id
             )
         ])
-    }).then(([[space_time]]) => {
+    }).then(([[space_time], [sensor_case], [sensor_case_attr]]) => {
         return {
-            space_time: space_time
+            space_time,
+            sensor_case,
+            sensor_case_attr
         };
     });
 };

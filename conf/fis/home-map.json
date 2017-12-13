@@ -8014,6 +8014,14 @@
             },
             "subpath": "/views/home/page/space_time/list.tpl"
         },
+        "home:page/space_time/view_sensor_case.tpl": {
+            "uri": "home/page/space_time/view_sensor_case.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/view_sensor_case.tpl"
+        },
         "home:page/space_time/view.tpl": {
             "uri": "home/page/space_time/view.tpl",
             "type": "tpl",
@@ -8231,19 +8239,6 @@
             ],
             "subpath": "/views/home/widget/timespace/timespace.tpl"
         },
-        "home:components/lodash/index.js": {
-            "uri": "/static/home/components/lodash/index.js",
-            "type": "js",
-            "subpath": "/static/home/components/lodash/index.js"
-        },
-        "home:page/space_time/view_sensor_case.tpl": {
-            "uri": "home/page/space_time/view_sensor_case.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/home/page/space_time/view_sensor_case.tpl"
-        },
         "home:widget/view_sensor_case/view_sensor_case.js": {
             "uri": "/static/home/widget/view_sensor_case/view_sensor_case.js",
             "type": "js",
@@ -8259,6 +8254,11 @@
                 "home:widget/view_sensor_case/view_sensor_case.js"
             ],
             "subpath": "/views/home/widget/view_sensor_case/view_sensor_case.tpl"
+        },
+        "home:components/lodash/index.js": {
+            "uri": "/static/home/components/lodash/index.js",
+            "type": "js",
+            "subpath": "/static/home/components/lodash/index.js"
         }
     },
     "pkg": {}

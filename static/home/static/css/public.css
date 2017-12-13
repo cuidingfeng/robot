@@ -29,6 +29,10 @@
     line-height: 3;
     border-bottom: #ddd dashed 1px;
 }
+.fromone2{
+    line-height: 3;
+    padding-left: 2em;
+}
 .fromone label{
     font-weight: bold;
 }

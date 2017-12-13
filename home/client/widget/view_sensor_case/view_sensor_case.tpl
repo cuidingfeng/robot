@@ -31,7 +31,7 @@
     <div class="formBox">
         <div class="fromone">
             <label>{{ attr.title }}[{{ attr.attr_name }}]：</label>
-            <input type="text" data-attrid="{{ attr.id }}" data-regexp="{{ attr.value }}" class="input caseAttr" />
+            <input type="text" data-attrid="{{ attr.id }}" value="{{ attr.case_value }}" data-regexp="{{ attr.value }}" class="input caseAttr" />
             <div class="msg2">{{ attr.info }}</div>
         </div>
     </div>

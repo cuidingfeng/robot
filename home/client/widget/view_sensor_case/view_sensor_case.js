@@ -29,10 +29,6 @@ const saveAttr = function(){
         dataType: "json",
         type: "post"
     }).then(function(data){
-        if(data.res.error){
-            alert(data.res.error);
-        }else{
-            location.reload();
-        }
+        alert("修改成功");
     });
 };

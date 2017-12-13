@@ -31,11 +31,7 @@ define('home:widget/view_sensor_case/view_sensor_case.js', function(require, exp
           dataType: "json",
           type: "post"
       }).then(function(data){
-          if(data.res.error){
-              alert(data.res.error);
-          }else{
-              location.reload();
-          }
+          alert("修改成功");
       });
   };
   
