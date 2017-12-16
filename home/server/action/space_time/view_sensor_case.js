@@ -20,7 +20,8 @@ module.exports.get = function (req, res) {
                         sensor_case_id: sensor_case_id,
                         sensor: $sensor.sensor[0],
                         sensor_attr: attrs,
-                        space_time: $space_time.space_time[0]
+                        space_time: $space_time.space_time[0],
+                        from: req.query.from
                     });
                 });
         });

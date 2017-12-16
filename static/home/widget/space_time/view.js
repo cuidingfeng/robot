@@ -60,10 +60,20 @@ define('home:widget/space_time/view.js', function(require, exports, module) {
   });
   
   $("a[ajax=true]").click(function(){
-      var url = $(this).attr("href");
-      $.get(url).then(function(data){
-          location.reload();
-      });
+      let url = $(this).attr("href"),
+          $confirm = $(this).attr("confirm"),
+          $text = $(this).text(),
+          $fn = () => {
+              $.get(url).then(function(data){
+                  location.reload();
+              });
+          };
+      if($confirm == "true"){
+          confirm(`确定要执行操作【${$text}】吗？`) && $fn();
+      }else{
+          $fn();
+      }
+      return false;
   });
   
   

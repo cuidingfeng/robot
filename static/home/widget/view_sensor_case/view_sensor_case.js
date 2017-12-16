@@ -10,10 +10,11 @@ define('home:widget/view_sensor_case/view_sensor_case.js', function(require, exp
   }
   
   $("#create_btn").click(function(){
-      saveAttr();
+      const from = $(this).data("from");
+      saveAttr(from);
   });
   
-  const saveAttr = function(){
+  const saveAttr = function(from){
       let datas = [];
       $(".caseAttr").each(function(){
           let attrid = $(this).data("attrid"),
@@ -31,7 +32,11 @@ define('home:widget/view_sensor_case/view_sensor_case.js', function(require, exp
           dataType: "json",
           type: "post"
       }).then(function(data){
-          alert("修改成功");
+          if(from == "space_time_add"){
+              location.replace("./view?id=" + space_time_id);
+          }else{
+              alert("修改成功");
+          }
       });
   };
   

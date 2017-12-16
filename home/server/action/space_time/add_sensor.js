@@ -24,6 +24,6 @@ module.exports.get = function (req, res) {
         sid: sensor_id,
         stid: space_time_id
     }).then((data) => {
-        res.redirect('/home/space_time/view_sensor_case?scid=' + data.res.insertId );
+        res.redirect('/home/space_time/view_sensor_case?from=space_time_add&scid=' + data.res.insertId );
     });
 };

@@ -8,10 +8,11 @@ module.exports = function(_sensor_id, _space_time_id, _sensor_case_id){
 }
 
 $("#create_btn").click(function(){
-    saveAttr();
+    const from = $(this).data("from");
+    saveAttr(from);
 });
 
-const saveAttr = function(){
+const saveAttr = function(from){
     let datas = [];
     $(".caseAttr").each(function(){
         let attrid = $(this).data("attrid"),
@@ -29,6 +30,10 @@ const saveAttr = function(){
         dataType: "json",
         type: "post"
     }).then(function(data){
-        alert("修改成功");
+        if(from == "space_time_add"){
+            location.replace("./view?id=" + space_time_id);
+        }else{
+            alert("修改成功");
+        }
     });
 };

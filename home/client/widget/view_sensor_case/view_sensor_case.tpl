@@ -38,7 +38,7 @@
     {% endfor %}
 </div>
 
-<button id="create_btn" class="formBtn">确定</button>
+<button id="create_btn" class="formBtn" data-from="{{ from }}">确定</button>
 
 
 {% script %} 

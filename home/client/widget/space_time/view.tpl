@@ -57,57 +57,46 @@
         {% endfor %}
     </div>
     <div>
-        <a href="#">编辑</a>
-        <a href="./view_attr_del?id={{$case.id}}" ajax="true">删除</a>
+        <a href="/home/space_time/view_sensor_case?scid={{$case.scid}}" target="_blank">编辑</a>
+        <a href="/home/space_time/del_sensor?scid={{$case.scid}}" confirm="true" ajax="true">删除</a>
     </div>
 </div>
 {% endfor %}
 
 
-<h2>支持的事件</h2>
+<h2>已添加的机器人</h2>
+<a href="./add_robot?space_time_id={{ space_time.id }}">添加新机器人</a>
 
-<div class="fromone">
-    <label>事件名称：</label>
-    <input type="text" id="event_title" class="input" />
+{% for key, $robot_case in robot_case %}
+<div class="formBox">
+    <div class="fromone">
+        <label>机器人实例ID：</label>
+        {{ $robot_case.rcid }}
+    </div>
+    <div class="fromone">
+        <label>机器人名称：</label>
+        <a href="/home/robot/view?id={{$robot_case.rid}}" target="_blank">{{ $robot_case.title }}</a>
+    </div>
+    <div class="fromone">
+        <label>机器人标识：</label>
+        {{ $robot_case.robotId }}
+    </div>
+    <div class="fromone">
+        <label>机器人协议：</label>
+        {{ $robot_case.stype }}
+    </div>
+    
+    <div>
+        <a href="./del_robot?rcid={{$robot_case.rcid}}" confirm="true" ajax="true">删除</a>
+    </div>
 </div>
+{% endfor %}
 
-<div class="fromone">
-    <label>事件标识：</label>
-    <input type="text" id="event_name" class="input" />
-</div>
+<h2>状态机</h2>
+<a href="./add_robot?space_time_id={{ space_time.id }}">添加新状态</a>
 
-<div class="fromone">
-    <label>数据格式：</label>
-    <textarea id="event_value" class="textarea"></textarea>
-</div>
+<h2>所有规则</h2>
+<a href="./add_robot?space_time_id={{ space_time.id }}">添加新规则</a>
 
-<div class="fromone">
-    <label>事件说明：</label>
-    <textarea id="event_info" class="textarea"></textarea>
-</div>
-
-<button class="formBtn" id="addEvent">添加事件</button>
-
-<table class="list">
-    <tr>
-        <th>名称</th>
-        <th>标识</th>
-        <th>格式</th>
-        <th>说明</th>
-        <th>操作</th>
-    </tr>
-    {% for key, event in events %}
-    <tr>
-        <td>{{ event.title }}</td>
-        <td>{{ event.event_name }}</td>
-        <td>{{ event.value }}</td>
-        <td>{{ event.info }}</td>
-        <td>
-            <a href="#">编辑</a>
-            <a href="./view_event_del?id={{event.id}}" ajax="true">删除</a>
-        </td>
-    </tr>
-    {% endfor %}
-</table>
 
 {% script %} require("./view")( {{ space_time.id }} ) {% endscript %}

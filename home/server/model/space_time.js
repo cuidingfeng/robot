@@ -13,6 +13,10 @@ module.exports.save_sensor_case = function (data) {
     return save_sensor_case(data);
 };
 
+module.exports.save_robot_case = function (data) {
+    return save_robot_case(data);
+};
+
 module.exports.save_sensor_case_attr = function (data) {
     return save_sensor_case_attr(data);
 };
@@ -42,6 +46,22 @@ const save_sensor_case = function (data) {
         conn = _conn;
         return conn.query(
             'insert into sensor_case set ?',
+            data
+        )
+    }).then(([rows, fields]) => {
+        return {
+            res: rows,
+            req: data
+        };
+    });
+};
+
+const save_robot_case = function (data) {
+    let conn;
+    return db.then((_conn) => {
+        conn = _conn;
+        return conn.query(
+            'insert into robot_case set ?',
             data
         )
     }).then(([rows, fields]) => {
@@ -111,13 +131,18 @@ module.exports.view = function (id) {
             conn.query(
                 'select sensor_case_attr.*, sensor_attr.*, sensor_case_attr.value as case_value  from sensor_case_attr, sensor_case, sensor_attr WHERE sensor_case.stid=? and sensor_case_attr.scid=sensor_case.id and sensor_attr.id=sensor_case_attr.said order by sensor_case_attr.scid',
                 id
+            ),
+            conn.query(
+                'select *, robot_case.id as rcid  from robot, robot_case WHERE robot_case.stid=? and robot.id=robot_case.rid order by robot_case.id',
+                id
             )
         ])
-    }).then(([[space_time], [sensor_case], [sensor_case_attr]]) => {
+    }).then(([[space_time], [sensor_case], [sensor_case_attr], [robot_case]]) => {
         return {
             space_time,
             sensor_case,
-            sensor_case_attr
+            sensor_case_attr,
+            robot_case
         };
     });
 };
@@ -130,6 +155,44 @@ module.exports.db_sensor_case = (scid) => {
         )
     }).then(([rs]) => {
         return rs[0]
+    });
+};
+
+module.exports.db_robot_case = (rcid) => {
+    return db.then((conn) => {
+        return conn.query(
+            'select * from robot_case where id=?',
+            rcid
+        )
+    }).then(([rs]) => {
+        return rs[0]
+    });
+};
+
+module.exports.del_sensor = (scid) => {
+    return db.then((conn) => {
+        conn.query(
+            'delete from sensor_case where id=?',
+            scid
+        );
+        conn.query(
+            'delete from sensor_case_attr where scid=?',
+            scid
+        );
+        return "ok"
+    }).then((status) => {
+        return status
+    });
+};
+
+module.exports.del_robot = (rcid) => {
+    return db.then((conn) => {
+        return conn.query(
+            'delete from robot_case where id=?',
+            rcid
+        );
+    }).then((rs) => {
+        return "ok"
     });
 };
 
