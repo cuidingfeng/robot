@@ -93,7 +93,27 @@
 {% endfor %}
 
 <h2>状态机</h2>
-<a href="./add_robot?space_time_id={{ space_time.id }}">添加新状态</a>
+<a href="./status?space_time_id={{ space_time.id }}" target="_blank">添加新状态</a>
+
+<table class="list">
+    <tr>
+        <th>id</th>
+        <th>名称</th>
+        <th>标识</th>
+        <th>操作</th>
+    </tr>
+{% for key, $status in statusList %}
+<tr>
+    <td>{{ $status.id }}</td>
+    <td>{{ $status.title }}</td>
+    <td>{{ $status.name }}</td>
+    <td>
+        <a href="./status?space_time_id={{space_time.id}}&status_id={{$status.id}}" target="_blank">查看</a>
+        <a href="./del_status?status_id={{$status.id}}" confirm="true" ajax="true">删除</a>
+    </td>
+</tr>
+{% endfor %} 
+</table>
 
 <h2>所有规则</h2>
 <a href="./add_robot?space_time_id={{ space_time.id }}">添加新规则</a>

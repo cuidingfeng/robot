@@ -1,0 +1,2 @@
+::ffff:127.0.0.1 - - [17/Dec/2017:00:02:36 ] "GET /home/sensor/view?id=27 HTTP/1.1" 200 - http://127.0.0.1:8001/home/space_time/view?id=1 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 12.522
+::ffff:127.0.0.1 - - [17/Dec/2017:00:11:39 ] "GET /home/sensor/view?id=27 HTTP/1.1" 200 - http://127.0.0.1:8001/home/space_time/view?id=1 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 16.498

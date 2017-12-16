@@ -21,6 +21,14 @@ module.exports.save_sensor_case_attr = function (data) {
     return save_sensor_case_attr(data);
 };
 
+module.exports.saveStatus = function (data, status_id) {
+    if(status_id){
+        return updateStatus(data, status_id);
+    }else{
+        return createStatus(data);
+    }
+};
+
 
 const createone = function (data) {
     let conn;
@@ -30,6 +38,38 @@ const createone = function (data) {
         return conn.query(
             'insert into space_time set ?',
             data
+        )
+    }).then(([rows, fields]) => {
+        return {
+            res: rows,
+            req: data
+        };
+    });
+};
+
+const createStatus = function (data) {
+    let conn;
+    return db.then((_conn) => {
+        conn = _conn;
+        return conn.query(
+            'insert into status set ?',
+            data
+        )
+    }).then(([rows, fields]) => {
+        return {
+            res: rows,
+            req: data
+        };
+    });
+};
+
+const updateStatus = function (data, status_id) {
+    let conn;
+    return db.then((_conn) => {
+        conn = _conn;
+        return conn.query(
+            'UPDATE status SET ? WHERE id=?',
+            [data, status_id]
         )
     }).then(([rows, fields]) => {
         return {
@@ -117,6 +157,30 @@ module.exports.list = function () {
     });
 };
 
+module.exports.viewStatus = function (status_id) {
+    return db.then((conn) => {
+        return conn.query(
+            'select * from status where id=?',
+            status_id
+        )
+    }).then(([rows, fields]) => {
+        return rows;
+    });
+};
+
+const statusList = function (space_time_id) {
+    return db.then((conn) => {
+        return conn.query(
+            'select * from status where stid=?',
+            space_time_id
+        )
+    }).then(([rows, fields]) => {
+        return rows;
+    });
+};
+module.exports.statusList = statusList;
+
+
 module.exports.view = function (id) {
     return db.then((conn) => {
         return Promise.all([
@@ -135,14 +199,16 @@ module.exports.view = function (id) {
             conn.query(
                 'select *, robot_case.id as rcid  from robot, robot_case WHERE robot_case.stid=? and robot.id=robot_case.rid order by robot_case.id',
                 id
-            )
+            ),
+            statusList(id)
         ])
-    }).then(([[space_time], [sensor_case], [sensor_case_attr], [robot_case]]) => {
+    }).then(([[space_time], [sensor_case], [sensor_case_attr], [robot_case], statusList]) => {
         return {
             space_time,
             sensor_case,
             sensor_case_attr,
-            robot_case
+            robot_case,
+            statusList
         };
     });
 };
@@ -190,6 +256,17 @@ module.exports.del_robot = (rcid) => {
         return conn.query(
             'delete from robot_case where id=?',
             rcid
+        );
+    }).then((rs) => {
+        return "ok"
+    });
+};
+
+module.exports.del_status = (status_id) => {
+    return db.then((conn) => {
+        return conn.query(
+            'delete from status where id=?',
+            status_id
         );
     }).then((rs) => {
         return "ok"

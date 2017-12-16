@@ -93,7 +93,40 @@ secretKey={{ sensor.secretkey }}
 
 <div class="fromone">
 <label>数据格式：</label>
-<textarea id="event_value" class="textarea"></textarea>
+<textarea id="event_value" class="textarea">
+[
+{
+    "keyname": "time",
+    "type": "Number",
+    "regexp": "\d{13}",
+    "default": 1513440060452,
+    "info": "发生时间的时间戳，13位数字"
+},
+{
+    "keyname": "time2",
+    "type": "Object",
+    "attr": [{
+        "keyname": "hour",
+        "type": "Number",
+        "regexp": "\d{1,2}",
+        "default": 12,
+        "info": "小时字段"
+    }],
+    "info": "发生时间的对象"
+},
+{
+    "keyname": "time3",
+    "type": "Array",
+    "child": {
+        "type": "String",
+        "regexp": "\w{1,2}",
+        "default": 12,
+        "info": "小时字段"
+    },
+    "info": "发生时间的对象"
+}
+]
+</textarea>
 </div>
 
 <div class="fromone">

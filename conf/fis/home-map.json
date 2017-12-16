@@ -8259,6 +8259,30 @@
             "uri": "/static/home/components/lodash/index.js",
             "type": "js",
             "subpath": "/static/home/components/lodash/index.js"
+        },
+        "home:page/space_time/view_status.tpl": {
+            "uri": "home/page/space_time/view_status.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/view_status.tpl"
+        },
+        "home:widget/view_status/view_status.tpl": {
+            "uri": "home/widget/view_status/view_status.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/view_status/view_status.js"
+            ],
+            "subpath": "/views/home/widget/view_status/view_status.tpl"
+        },
+        "home:widget/view_status/view_status.js": {
+            "uri": "/static/home/widget/view_status/view_status.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/view_status/view_status.js"
         }
     },
     "pkg": {}
