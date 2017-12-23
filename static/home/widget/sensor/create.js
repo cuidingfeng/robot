@@ -28,11 +28,13 @@ define('home:widget/sensor/create.js', function(require, exports, module) {
           uri = $("#uri").val(),
           stype = $("#stype").val(),
           info = $("#info").val(),
+          init_url = $("#init_url").val(),
           post_data = {
               title: title,
               uri: uri,
               stype: stype,
-              info: info
+              info: info,
+              init_url
           };
   
       $.ajax("/home/sensor/save_sensor", {

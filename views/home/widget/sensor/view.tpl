@@ -2,56 +2,61 @@
 <p class="msg">传感器开发者在这里查看，设置传感器需要用户填的属性和支持的事件</p>
 
 <div class="fromone">
-<label>传感器名称：</label>
-{{ sensor.title }}
+    <label>传感器名称：</label>
+    {{ sensor.title }}
 </div>
 
 <div class="fromone">
-<label>传感器唯一标识：</label>
-{{ sensor.uri }}
+    <label>传感器唯一标识：</label>
+    {{ sensor.uri }}
 </div>
 
 <div class="fromone">
-<label>传感器通信协议：</label>
-{{ sensor.stype }}
+    <label>传感器通信协议：</label>
+    {{ sensor.stype }}
 </div>
 
 <div class="fromone">
-<label>传感器介绍说明：</label>
-{{ sensor.info }}
+    <label>传感器初始实例的地址：</label>
+    {{ sensor.init_url }}
 </div>
 
 <div class="fromone">
-<label>通信URI：</label>
-http://127.0.0.1:8000/sensor/{{ sensor.id }}
+    <label>传感器介绍说明：</label>
+    {{ sensor.info }}
 </div>
 
 <div class="fromone">
-<label>密匙：</label>
-secretKey={{ sensor.secretkey }}
+    <label>通信URI：</label>
+    http://127.0.0.1:8000/sensor/{{ sensor.id }}
+</div>
+
+<div class="fromone">
+    <label>密匙：</label>
+    secretKey={{ sensor.secretkey }}
 </div>
 
 
 <h2>需要的属性</h2>
 
 <div class="fromone">
-<label>属性名称：</label>
-<input type="text" name="title" id="attr_title" class="input" />
+    <label>属性名称：</label>
+    <input type="text" name="title" id="attr_title" class="input" />
 </div>
 
 <div class="fromone">
-<label>属性标识：</label>
-<input type="text" name="attr_name" id="attr_name" class="input" />
+    <label>属性标识：</label>
+    <input type="text" name="attr_name" id="attr_name" class="input" />
 </div>
 
 <div class="fromone">
-<label>属性说明：</label>
-<textarea id="attr_info" class="textarea"></textarea>
+    <label>属性说明：</label>
+    <textarea id="attr_info" class="textarea"></textarea>
 </div>
 
 <div class="fromone">
-<label>属性值的格式，正则：</label>
-<input type="text" name="value" id="attr_value" class="input" />
+    <label>属性值的格式，正则：</label>
+    <input type="text" name="value" id="attr_value" class="input" />
 </div>
 
 <button class="formBtn" id="addAttr">添加属性</button>
@@ -82,18 +87,18 @@ secretKey={{ sensor.secretkey }}
 <h2>支持的事件</h2>
 
 <div class="fromone">
-<label>事件名称：</label>
-<input type="text" id="event_title" class="input" />
+    <label>事件名称：</label>
+    <input type="text" id="event_title" class="input" />
 </div>
 
 <div class="fromone">
-<label>事件标识：</label>
-<input type="text" id="event_name" class="input" />
+    <label>事件标识：</label>
+    <input type="text" id="event_name" class="input" />
 </div>
 
 <div class="fromone">
-<label>数据格式：</label>
-<textarea id="event_value" class="textarea">
+    <label>数据格式：</label>
+    <textarea id="event_value" class="textarea">
 [
 {
     "keyname": "time",
@@ -130,8 +135,8 @@ secretKey={{ sensor.secretkey }}
 </div>
 
 <div class="fromone">
-<label>事件说明：</label>
-<textarea id="event_info" class="textarea"></textarea>
+    <label>事件说明：</label>
+    <textarea id="event_info" class="textarea"></textarea>
 </div>
 
 <button class="formBtn" id="addEvent">添加事件</button>
@@ -158,6 +163,4 @@ secretKey={{ sensor.secretkey }}
     {% endfor %}
 </table>
 
-{% script %}
-require("home:widget/sensor/view.js")( {{ sensor.id }} )
-{% endscript %}
+{% script %} require("home:widget/sensor/view.js")( {{ sensor.id }} ) {% endscript %}

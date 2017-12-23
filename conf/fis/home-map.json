@@ -8022,6 +8022,14 @@
             },
             "subpath": "/views/home/page/space_time/view_sensor_case.tpl"
         },
+        "home:page/space_time/view_status.tpl": {
+            "uri": "home/page/space_time/view_status.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/view_status.tpl"
+        },
         "home:page/space_time/view.tpl": {
             "uri": "home/page/space_time/view.tpl",
             "type": "tpl",
@@ -8255,18 +8263,13 @@
             ],
             "subpath": "/views/home/widget/view_sensor_case/view_sensor_case.tpl"
         },
-        "home:components/lodash/index.js": {
-            "uri": "/static/home/components/lodash/index.js",
+        "home:widget/view_status/view_status.js": {
+            "uri": "/static/home/widget/view_status/view_status.js",
             "type": "js",
-            "subpath": "/static/home/components/lodash/index.js"
-        },
-        "home:page/space_time/view_status.tpl": {
-            "uri": "home/page/space_time/view_status.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/home/page/space_time/view_status.tpl"
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/view_status/view_status.js"
         },
         "home:widget/view_status/view_status.tpl": {
             "uri": "home/widget/view_status/view_status.tpl",
@@ -8276,13 +8279,34 @@
             ],
             "subpath": "/views/home/widget/view_status/view_status.tpl"
         },
-        "home:widget/view_status/view_status.js": {
-            "uri": "/static/home/widget/view_status/view_status.js",
+        "home:components/lodash/index.js": {
+            "uri": "/static/home/components/lodash/index.js",
+            "type": "js",
+            "subpath": "/static/home/components/lodash/index.js"
+        },
+        "home:page/rule/index.tpl": {
+            "uri": "home/page/rule/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/rule/index.tpl"
+        },
+        "home:widget/rule/index.tpl": {
+            "uri": "home/widget/rule/index.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/rule/index.js"
+            ],
+            "subpath": "/views/home/widget/rule/index.tpl"
+        },
+        "home:widget/rule/index.js": {
+            "uri": "/static/home/widget/rule/index.js",
             "type": "js",
             "deps": [
                 "home:components/jquery/jquery.js"
             ],
-            "subpath": "/static/home/widget/view_status/view_status.js"
+            "subpath": "/static/home/widget/rule/index.js"
         }
     },
     "pkg": {}

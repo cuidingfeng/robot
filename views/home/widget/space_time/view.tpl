@@ -116,7 +116,7 @@
 </table>
 
 <h2>所有规则</h2>
-<a href="./add_robot?space_time_id={{ space_time.id }}">添加新规则</a>
+<a href="./rule?space_time_id={{ space_time.id }}">添加新规则</a>
 
 
 {% script %} require("home:widget/space_time/view.js")( {{ space_time.id }} ) {% endscript %}
