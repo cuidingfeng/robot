@@ -16,3 +16,15 @@ module.exports.local = function(req){
         "req": req
     });
 };
+
+module.exports.http = function(body){
+    manage.on({
+        "protocol": "http",
+        "evType": "sensor",
+        "sensor_id": body.sensor_id,
+        "sensor_case_id": body.sensor_case_id,
+        "eventName": body.eventName,
+        "data": JSON.parse(body.data),
+        "body": body
+    });
+};

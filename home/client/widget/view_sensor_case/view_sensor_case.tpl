@@ -26,7 +26,18 @@
 </div>
 
 <div class="fromone">
+    <label>传感器实例别名：</label>
+    <input type="text" id="alias" value="{{ sensor_case.alias }}" class="input" />
+</div>
+
+<div class="fromone">
+    <label>传感器实例说明：</label>
+    <textarea id="case_info" class="textarea">{{ sensor_case.case_info }}</textarea>
+</div>
+
+<div class="fromone">
     <label>传感器属性：</label>
+    
     {% for key, attr in sensor_attr %}
     <div class="formBox">
         <div class="fromone">

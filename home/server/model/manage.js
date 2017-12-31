@@ -4,15 +4,56 @@ const lodash = require("lodash");
 let execute = require("./execute");
 let Tree = {};
 
-module.exports.on = function(conf){
-    setTree(conf);
-    if(Tree['time'].attr.dbtotal % 5 === 0){
-        execute.exec("print", getExecTimeData(Tree));
+const { getSpaceTimeId, getRule, getStatus } = require("./apis/main");
+const Fun = require("./apis/fun");
+
+module.exports.on = async function (conf) {
+    if(conf.evType == "sensor"){
+        await onSensor(conf);
+    }
+    if(conf.evType == "status"){
+        await onStatus(conf);
     }
 };
 
-const setTree = function(conf){
-    if(!Tree[conf.namespace]){
+const onSensor = async function(conf){
+    const space_time_id = await getSpaceTimeId({ sensor_case_id: conf.sensor_case_id });
+    const rule = await getRule({ sensor_case_id: conf.sensor_case_id, eventName: conf.eventName });
+    const $data = conf.data,
+        $code = rule.code,
+        $status = await getStatus(space_time_id);
+
+    const $fn = Fun.getFun($code);
+    Fun.runFun({
+        FN: $fn,
+        data: $data,
+        status: $status,
+        type: "sensor"
+    });
+}
+
+const onStatus = async function(conf){
+    const space_time_id = await getSpaceTimeId({ status_id: conf.status_id });
+    const rule = await getRule({ status_id: conf.status_id });
+    const $data = conf.data,
+        $code = rule.code,
+        $status = await getStatus(space_time_id);
+
+    const $fn = Fun.getFun($code);
+    Fun.runFun({
+        FN: $fn,
+        data: $data,
+        status: $status,
+        type: "status"
+    });
+}
+
+/**
+ * 合并事件数据到时空
+ * @param {Object} conf 
+ */
+const setTree = function (conf) {
+    if (!Tree[conf.namespace]) {
         Tree[conf.namespace] = {
             data: {},
             attr: {}
@@ -23,12 +64,12 @@ const setTree = function(conf){
     //console.log(JSON.stringify(Tree));
 };
 
-const timeAttr = function(obj){
+const timeAttr = function (obj) {
     obj.attr.dbtotal = obj.data.total * 2;
     return obj.attr;
 };
 
-const getExecTimeData = function(tree){
+const getExecTimeData = function (tree) {
     return {
         "msg": `print my time is ${tree.time.data.total}`
     }

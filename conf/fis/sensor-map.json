@@ -44,10 +44,29 @@
             ],
             "subpath": "/static/sensor/static/js/page.js"
         },
-        "sensor:widget/message/message.tpl": {
-            "uri": "sensor/widget/message/message.tpl",
+        "sensor:page/http.tpl": {
+            "uri": "sensor/page/http.tpl",
             "type": "tpl",
-            "subpath": "/views/sensor/widget/message/message.tpl"
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/sensor/page/http.tpl"
+        },
+        "sensor:widget/http/http.tpl": {
+            "uri": "sensor/widget/http/http.tpl",
+            "type": "tpl",
+            "deps": [
+                "sensor:widget/http/http.js"
+            ],
+            "subpath": "/views/sensor/widget/http/http.tpl"
+        },
+        "sensor:widget/http/http.js": {
+            "uri": "/static/sensor/widget/http/http.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/sensor/widget/http/http.js"
         }
     },
     "pkg": {}

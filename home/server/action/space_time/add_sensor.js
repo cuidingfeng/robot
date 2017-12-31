@@ -1,4 +1,5 @@
 let space_time = require("../../model/space_time"),
+    sensor = require("../../model/sensor"),
     util = require('../../lib/util');
     
 /**
@@ -20,7 +21,7 @@ module.exports.get = function (req, res) {
         return;
     }
 
-    space_time.save_sensor_case({
+    sensor.save_sensor_case({
         sid: sensor_id,
         stid: space_time_id
     }).then((data) => {

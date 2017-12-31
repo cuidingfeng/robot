@@ -28,7 +28,7 @@
 
 <div class="fromone">
     <label>通信URI：</label>
-    http://127.0.0.1:8000/sensor/{{ sensor.id }}
+    http://127.0.0.1:8001/home/sensor/listen
 </div>
 
 <div class="fromone">

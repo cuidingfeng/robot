@@ -27,3 +27,12 @@
 # 备忘录
 
 - 启动mysql, mysql.server start
+
+
+if($data.time == 12){
+$status.abc = "cuidingfeng"
+}
+
+if($data.hour == 8){
+$robot.myrobot_1.action1($status.abc)
+}

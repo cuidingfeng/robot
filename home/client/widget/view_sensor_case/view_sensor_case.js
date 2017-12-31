@@ -14,6 +14,8 @@ $("#create_btn").click(function(){
 
 const saveAttr = function(from){
     let datas = [];
+    let alias = $("#alias").val();
+    let case_info = $("#case_info").val();
     $(".caseAttr").each(function(){
         let attrid = $(this).data("attrid"),
             value = $(this).val();
@@ -22,10 +24,13 @@ const saveAttr = function(from){
             value: value
         });
     });
-    $.ajax("/home/space_time/save_sensor_case_attr", {
+    $.ajax("/home/space_time/save_sensor_case", {
         data: {
             datas: JSON.stringify(datas),
-            sensor_case_id: sensor_case_id
+            sensor_case_id,
+            sensor_id,
+            alias,
+            case_info
         },
         dataType: "json",
         type: "post"

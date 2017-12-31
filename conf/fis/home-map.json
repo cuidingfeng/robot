@@ -7974,6 +7974,14 @@
             },
             "subpath": "/views/home/page/robot/view.tpl"
         },
+        "home:page/rule/index.tpl": {
+            "uri": "home/page/rule/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/rule/index.tpl"
+        },
         "home:page/sensor/create.tpl": {
             "uri": "home/page/sensor/create.tpl",
             "type": "tpl",
@@ -8145,6 +8153,22 @@
             ],
             "subpath": "/views/home/widget/robot/view.tpl"
         },
+        "home:widget/rule/index.js": {
+            "uri": "/static/home/widget/rule/index.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/rule/index.js"
+        },
+        "home:widget/rule/index.tpl": {
+            "uri": "home/widget/rule/index.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/rule/index.js"
+            ],
+            "subpath": "/views/home/widget/rule/index.tpl"
+        },
         "home:widget/sensor/create.js": {
             "uri": "/static/home/widget/sensor/create.js",
             "type": "js",
@@ -8283,30 +8307,6 @@
             "uri": "/static/home/components/lodash/index.js",
             "type": "js",
             "subpath": "/static/home/components/lodash/index.js"
-        },
-        "home:page/rule/index.tpl": {
-            "uri": "home/page/rule/index.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/home/page/rule/index.tpl"
-        },
-        "home:widget/rule/index.tpl": {
-            "uri": "home/widget/rule/index.tpl",
-            "type": "tpl",
-            "deps": [
-                "home:widget/rule/index.js"
-            ],
-            "subpath": "/views/home/widget/rule/index.tpl"
-        },
-        "home:widget/rule/index.js": {
-            "uri": "/static/home/widget/rule/index.js",
-            "type": "js",
-            "deps": [
-                "home:components/jquery/jquery.js"
-            ],
-            "subpath": "/static/home/widget/rule/index.js"
         }
     },
     "pkg": {}

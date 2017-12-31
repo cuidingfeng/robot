@@ -1,0 +1,14 @@
+::ffff:127.0.0.1 - - [31/Dec/2017:17:10:39 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 6.550
+::ffff:127.0.0.1 - - [31/Dec/2017:17:12:24 ] "GET /sensor/http HTTP/1.1" 500 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 18.810
+::ffff:127.0.0.1 - - [31/Dec/2017:17:12:40 ] "GET /sensor/http HTTP/1.1" 500 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 19.335
+::ffff:127.0.0.1 - - [31/Dec/2017:17:12:52 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 11.772
+::ffff:127.0.0.1 - - [31/Dec/2017:17:12:53 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.371
+::ffff:127.0.0.1 - - [31/Dec/2017:17:15:21 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 20.467
+::ffff:127.0.0.1 - - [31/Dec/2017:17:15:56 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 13.572
+::ffff:127.0.0.1 - - [31/Dec/2017:17:17:01 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 29.189
+::ffff:127.0.0.1 - - [31/Dec/2017:17:18:06 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 17.442
+::ffff:127.0.0.1 - - [31/Dec/2017:17:18:07 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.412
+::ffff:127.0.0.1 - - [31/Dec/2017:17:18:09 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 2.148
+::ffff:127.0.0.1 - - [31/Dec/2017:17:18:11 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 200 9 http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 1.494
+::ffff:127.0.0.1 - - [31/Dec/2017:17:31:11 ] "GET /home/ HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 7.448
+::ffff:127.0.0.1 - - [31/Dec/2017:17:31:13 ] "GET /home/sensor/create HTTP/1.1" 200 - http://127.0.0.1:8001/home/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 9.933

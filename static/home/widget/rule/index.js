@@ -55,7 +55,8 @@ define('home:widget/rule/index.js', function(require, exports, module) {
               alert(data.error);
           }else{
               $.each(data.res, (i, sensor) => {
-                  optionsHtml += `<option value="${sensor.id}">${sensor.title}【${sensor.title2}】</option>`
+                  console.log(sensor);
+                  optionsHtml += `<option value="${sensor.id}" scid="${sensor.scid}">${sensor.title}【${sensor.title2}】</option>`
               })
           }
           return `<select id="sensors">${optionsHtml}</select>`
@@ -80,7 +81,6 @@ define('home:widget/rule/index.js', function(require, exports, module) {
               alert(data.error);
           }else{
               $.each(data.res, (i, event) => {
-                  console.log(event);
                   optionsHtml += `<option value="${event.id}">${event.title}【${event.event_name}】</option>`
               })
           }
@@ -127,6 +127,44 @@ define('home:widget/rule/index.js', function(require, exports, module) {
           $fn();
       }
       return false;
+  });
+  
+  
+  $("#create_btn").click(function(){
+      let eventType = $("#eventType").val(),
+          code = $("#code").val(),
+          info = $("#info").val(),
+          post_data = {
+              space_time_id,
+              code,
+              info,
+              state: 1
+          };
+      if(eventType == "sensor"){
+          post_data.sensor_case_id = $("#sensors>option:selected").attr("scid");
+          post_data.event_id = $("#sensor_events").val();
+      }else if(eventType == "status"){
+          post_data.status_id = $("#statuss").val();
+      }else if(eventType == "robot"){
+          post_data.robot_case_id = $("#robots>option:selected").attr("rcid");
+          post_data.action_id = $("#robot_actions").val();
+      }else{
+          alert("请选择正确的事件类型！");
+          return;
+      }
+  
+      $.ajax("/home/rule/save_rule", {
+          data: post_data,
+          dataType: "json",
+          type: "post"
+      }).then(function(data){
+          console.log(data);
+          if(data.res.error){
+              alert(data.res.error);
+          }else{
+              location.href = `?space_time_id=${space_time_id}&rule_id=${data.res.insertId}`;
+          }
+      });
   });
   
 
