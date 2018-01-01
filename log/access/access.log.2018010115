@@ -1,0 +1,5 @@
+::ffff:127.0.0.1 - - [01/Jan/2018:15:42:43 ] "POST /robot/http/main HTTP/1.1" 200 2 - - - 2.339
+::ffff:127.0.0.1 - - [01/Jan/2018:15:42:43 ] "POST /home/space_time/save_robot_case HTTP/1.1" 200 243 http://127.0.0.1:8001/home/space_time/view_robot_case?rcid=3 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 16.516
+::ffff:127.0.0.1 - - [01/Jan/2018:15:56:06 ] "POST /robot/http/main HTTP/1.1" 200 2 - - - 4.465
+::ffff:127.0.0.1 - - [01/Jan/2018:15:57:34 ] "POST /robot/http/main HTTP/1.1" 200 2 - - - 6.826
+::ffff:127.0.0.1 - - [01/Jan/2018:15:57:34 ] "POST /home/space_time/save_robot_case HTTP/1.1" 200 2 http://127.0.0.1:8001/home/space_time/view_robot_case?rcid=3 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 302.953

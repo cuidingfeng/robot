@@ -1,0 +1,54 @@
+{
+    "res": {
+        "robot:page/index.tpl": {
+            "uri": "robot/page/index.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/robot/page/index.tpl"
+        },
+        "robot:page/layout.tpl": {
+            "uri": "robot/page/layout.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/robot/page/layout.tpl"
+        },
+        "robot:static/js/bigpipe.js": {
+            "uri": "/static/robot/static/js/bigpipe.js",
+            "type": "js",
+            "subpath": "/static/robot/static/js/bigpipe.js"
+        },
+        "robot:static/js/index.js": {
+            "uri": "/static/robot/static/js/index.js",
+            "type": "js",
+            "subpath": "/static/robot/static/js/index.js"
+        },
+        "robot:static/js/lazyload.js": {
+            "uri": "/static/robot/static/js/lazyload.js",
+            "type": "js",
+            "subpath": "/static/robot/static/js/lazyload.js"
+        },
+        "robot:static/js/mod.js": {
+            "uri": "/static/robot/static/js/mod.js",
+            "type": "js",
+            "subpath": "/static/robot/static/js/mod.js"
+        },
+        "robot:static/js/page.js": {
+            "uri": "/static/robot/static/js/page.js",
+            "type": "js",
+            "deps": [
+                "robot:static/js/bigpipe.js"
+            ],
+            "subpath": "/static/robot/static/js/page.js"
+        },
+        "robot:widget/message/message.tpl": {
+            "uri": "robot/widget/message/message.tpl",
+            "type": "tpl",
+            "subpath": "/views/robot/widget/message/message.tpl"
+        }
+    },
+    "pkg": {}
+}

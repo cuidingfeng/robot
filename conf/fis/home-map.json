@@ -8307,6 +8307,30 @@
             "uri": "/static/home/components/lodash/index.js",
             "type": "js",
             "subpath": "/static/home/components/lodash/index.js"
+        },
+        "home:page/space_time/view_robot_case.tpl": {
+            "uri": "home/page/space_time/view_robot_case.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/home/page/space_time/view_robot_case.tpl"
+        },
+        "home:widget/view_robot_case/view_robot_case.js": {
+            "uri": "/static/home/widget/view_robot_case/view_robot_case.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/home/widget/view_robot_case/view_robot_case.js"
+        },
+        "home:widget/view_robot_case/view_robot_case.tpl": {
+            "uri": "home/widget/view_robot_case/view_robot_case.tpl",
+            "type": "tpl",
+            "deps": [
+                "home:widget/view_robot_case/view_robot_case.js"
+            ],
+            "subpath": "/views/home/widget/view_robot_case/view_robot_case.tpl"
         }
     },
     "pkg": {}

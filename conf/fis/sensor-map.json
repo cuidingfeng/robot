@@ -1,5 +1,13 @@
 {
     "res": {
+        "sensor:page/http.tpl": {
+            "uri": "sensor/page/http.tpl",
+            "type": "tpl",
+            "extras": {
+                "isPage": true
+            },
+            "subpath": "/views/sensor/page/http.tpl"
+        },
         "sensor:page/index.tpl": {
             "uri": "sensor/page/index.tpl",
             "type": "tpl",
@@ -44,13 +52,13 @@
             ],
             "subpath": "/static/sensor/static/js/page.js"
         },
-        "sensor:page/http.tpl": {
-            "uri": "sensor/page/http.tpl",
-            "type": "tpl",
-            "extras": {
-                "isPage": true
-            },
-            "subpath": "/views/sensor/page/http.tpl"
+        "sensor:widget/http/http.js": {
+            "uri": "/static/sensor/widget/http/http.js",
+            "type": "js",
+            "deps": [
+                "home:components/jquery/jquery.js"
+            ],
+            "subpath": "/static/sensor/widget/http/http.js"
         },
         "sensor:widget/http/http.tpl": {
             "uri": "sensor/widget/http/http.tpl",
@@ -59,14 +67,6 @@
                 "sensor:widget/http/http.js"
             ],
             "subpath": "/views/sensor/widget/http/http.tpl"
-        },
-        "sensor:widget/http/http.js": {
-            "uri": "/static/sensor/widget/http/http.js",
-            "type": "js",
-            "deps": [
-                "home:components/jquery/jquery.js"
-            ],
-            "subpath": "/static/sensor/widget/http/http.js"
         }
     },
     "pkg": {}

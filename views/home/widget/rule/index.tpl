@@ -6,7 +6,7 @@
 </div>
 
 <div class="fromone">
-    <label>添加一条新规则 -</label>
+    <label>设置一条规则 -</label>
     <div>事件：<select id="eventType">
         <option value="">请选择</option>
         <option value="sensor">传感器事件发生</option>
@@ -14,11 +14,11 @@
         <option value="robot">机器人执行结果</option>
     </select><span id="eventOther"></span></div>
     <div>逻辑代码：</div>
-    <textarea class="textarea" id="code"></textarea>
+    <textarea class="textarea" id="code">{{rule.code}}</textarea>
     <div>规则说明：</div>
-    <textarea class="textarea" id="info"></textarea>
+    <textarea class="textarea" id="info">{{rule.info}}</textarea>
 </div>
-<button class="formBtn" id="create_btn">添加规则</button>
+<button class="formBtn" id="create_btn">保存规则</button>
 
 <h2>已添加的传感器事件</h2>
 
@@ -45,7 +45,7 @@
         {{ $sensorRule.state }}
     </div>
     <div>
-        <a href="?rule_id={{$sensorRule.rule_id}}" target="_blank">编辑</a>
+        <a href="?space_time_id={{space_time.id}}&rule_id={{$sensorRule.rule_id}}" target="_blank">编辑</a>
         <a href="/rule/del_rule?id={{$sensorRule.rule_id}}" confirm="true" ajax="true">删除</a>
     </div>
 </div>
@@ -72,10 +72,23 @@
         {{ $statusRule.state }}
     </div>
     <div>
-        <a href="?rule_id={{$statusRule.rule_id}}" target="_blank">编辑</a>
+        <a href="?space_time_id={{space_time.id}}&rule_id={{$statusRule.rule_id}}" target="_blank">编辑</a>
         <a href="/rule/del_rule?id={{$statusRule.rule_id}}" confirm="true" ajax="true">删除</a>
     </div>
 </div>
 {% endfor %}
 
-{% script %} require("home:widget/rule/index.js")({{ space_time.id }}); {% endscript %}
+{% script %} 
+require("home:widget/rule/index.js")(
+    `{{ space_time.id }}`, 
+    `{{ rule.id }}`, 
+    `{{ rule.sensor_case_id }}`,
+    `{{ rule.robot_case_id }}`,
+    `{{ rule.event_id }}`,
+    `{{ rule.action_id }}`,
+    `{{ rule.status_id }}`,
+    `{{ rule.code }}`,
+    `{{ rule.info }}`,
+    `{{ rule.state }}`
+); 
+{% endscript %}

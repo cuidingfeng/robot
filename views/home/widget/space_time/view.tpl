@@ -71,7 +71,7 @@
 <div class="formBox">
     <div class="fromone">
         <label>机器人实例ID：</label>
-        {{ $robot_case.rcid }}
+        <a href="/home/space_time/view_robot_case?rcid={{$robot_case.rcid}}" target="_blank">{{ $robot_case.alias }}</a>
     </div>
     <div class="fromone">
         <label>机器人名称：</label>

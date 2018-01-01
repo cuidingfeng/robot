@@ -147,14 +147,25 @@ module.exports.view = function (id) {
                 'select *, robot_case.id as rcid  from robot, robot_case WHERE robot_case.stid=? and robot.id=robot_case.rid order by robot_case.id',
                 id
             ),
+            conn.query(
+                `select robot_case_attr.*, robot_attr.*, robot_case_attr.value as case_value 
+                    from robot_case_attr, robot_case, robot_attr 
+                    WHERE 
+                    robot_case.stid=? and 
+                    robot_case_attr.rcid=robot_case.id and 
+                    robot_attr.id=robot_case_attr.raid 
+                    order by robot_case_attr.rcid`,
+                id
+            ),
             statusList(id)
         ])
-    }).then(([[space_time], [sensor_case], [sensor_case_attr], [robot_case], statusList]) => {
+    }).then(([[space_time], [sensor_case], [sensor_case_attr], [robot_case], [robot_case_attr], statusList]) => {
         return {
             space_time,
             sensor_case,
             sensor_case_attr,
             robot_case,
+            robot_case_attr,
             statusList
         };
     });

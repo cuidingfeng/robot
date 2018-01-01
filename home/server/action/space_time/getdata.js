@@ -1,7 +1,7 @@
 let rule = require("../../model/rule");
 
 module.exports = function (req, res) {
-    const { action, space_time_id, sensor_id } = req.body;
+    const { action, space_time_id, sensor_id, sensor_case_id } = req.body;
     let $data = {};
     switch (action) {
         case "sensorList":
@@ -11,7 +11,7 @@ module.exports = function (req, res) {
             });
             break;
         case "sensorEventList":
-            rule.sensorEventList(sensor_id).then((rs) => {
+            rule.sensorEventList(sensor_id, sensor_case_id).then((rs) => {
                 $data.res = rs;
                 res.send(JSON.stringify($data));
             });

@@ -33,20 +33,20 @@ define('home:widget/robot/view.js', function(require, exports, module) {
       });
   });
   
-  $("#addEvent").click(function(){
-      let title = $("#event_title").val(),
-          event_name = $("#event_name").val(),
-          value = $("#event_value").val(),
-          info = $("#event_info").val(),
+  $("#addAction").click(function(){
+      let title = $("#action_title").val(),
+          action_name = $("#action_name").val(),
+          value = $("#action_value").val(),
+          info = $("#action_info").val(),
           post_data = {
               robot_id: robotId,
               title: title,
-              event_name: event_name,
+              action_name: action_name,
               value: value,
               info: info
           };
   
-      $.ajax("/home/robot/save_event", {
+      $.ajax("/home/robot/save_action", {
           data: post_data,
           dataType: "json",
           type: "post"
@@ -60,11 +60,22 @@ define('home:widget/robot/view.js', function(require, exports, module) {
   });
   
   $("a[ajax=true]").click(function(){
-      var url = $(this).attr("href");
-      $.get(url).then(function(data){
-          location.reload();
-      });
+      let url = $(this).attr("href"),
+          $confirm = $(this).attr("confirm"),
+          $text = $(this).text(),
+          $fn = () => {
+              $.get(url).then(function(data){
+                  location.reload();
+              });
+          };
+      if($confirm == "true"){
+          confirm(`确定要执行操作【${$text}】吗？`) && $fn();
+      }else{
+          $fn();
+      }
+      return false;
   });
+  
   
   
 

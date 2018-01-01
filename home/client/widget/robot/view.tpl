@@ -1,5 +1,5 @@
 <h1>机器人详情</h1>
-<p class="msg">机器人开发者在这里查看，设置机器人需要用户填的属性和支持的事件</p>
+<p class="msg">机器人开发者在这里查看，设置机器人需要用户填的属性和支持的动作</p>
 
 <div class="fromone">
 <label>机器人名称：</label>
@@ -79,29 +79,29 @@ secretKey={{ robot.secretkey }}
 </table>
 
 
-<h2>支持的事件</h2>
+<h2>支持的动作</h2>
 
 <div class="fromone">
-<label>事件名称：</label>
-<input type="text" id="event_title" class="input" />
+<label>动作名称：</label>
+<input type="text" id="action_title" class="input" />
 </div>
 
 <div class="fromone">
-<label>事件标识：</label>
-<input type="text" id="event_name" class="input" />
+<label>动作标识：</label>
+<input type="text" id="action_name" class="input" />
 </div>
 
 <div class="fromone">
 <label>数据格式：</label>
-<textarea id="event_value" class="textarea"></textarea>
+<textarea id="action_value" class="textarea"></textarea>
 </div>
 
 <div class="fromone">
-<label>事件说明：</label>
-<textarea id="event_info" class="textarea"></textarea>
+<label>动作说明：</label>
+<textarea id="action_info" class="textarea"></textarea>
 </div>
 
-<button class="formBtn" id="addEvent">添加事件</button>
+<button class="formBtn" id="addAction">添加动作</button>
 
 <table class="list">
     <tr>
@@ -111,15 +111,15 @@ secretKey={{ robot.secretkey }}
         <th>说明</th>
         <th>操作</th>
     </tr>
-    {% for key, event in events %}
+    {% for key, action in actions %}
     <tr>
-        <td>{{ event.title }}</td>
-        <td>{{ event.event_name }}</td>
-        <td>{{ event.value }}</td>
-        <td>{{ event.info }}</td>
+        <td>{{ action.title }}</td>
+        <td>{{ action.action_name }}</td>
+        <td>{{ action.value }}</td>
+        <td>{{ action.info }}</td>
         <td>
             <a href="#">编辑</a>
-            <a href="./view_event_del?id={{event.id}}" ajax="true">删除</a>
+            <a href="./view_action_del?id={{action.id}}" confirm="true" ajax="true">删除</a>
         </td>
     </tr>
     {% endfor %}

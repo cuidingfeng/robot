@@ -24,6 +24,6 @@ module.exports.get = function (req, res) {
         rid: robot_id,
         stid: space_time_id
     }).then((data) => {
-        res.redirect('/home/space_time/view?id=' + space_time_id );
+        res.redirect('/home/space_time/view_robot_case?from=space_time_add&rcid=' + data.res.insertId );
     });
 };

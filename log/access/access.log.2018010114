@@ -1,0 +1,5 @@
+::ffff:127.0.0.1 - - [01/Jan/2018:14:00:24 ] "GET /home/space_time/view_robot_case?rcid=3 HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 23.171
+::ffff:127.0.0.1 - - [01/Jan/2018:14:03:12 ] "POST /robot/http/main HTTP/1.1" 200 2 - - - 2.087
+::ffff:127.0.0.1 - - [01/Jan/2018:14:03:12 ] "POST /home/space_time/save_robot_case HTTP/1.1" 200 243 http://127.0.0.1:8001/home/space_time/view_robot_case?rcid=3 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 20.711
+::ffff:127.0.0.1 - - [01/Jan/2018:14:06:38 ] "POST /robot/http/main HTTP/1.1" 200 2 - - - 1.589
+::ffff:127.0.0.1 - - [01/Jan/2018:14:06:38 ] "POST /home/space_time/save_robot_case HTTP/1.1" 200 243 http://127.0.0.1:8001/home/space_time/view_robot_case?rcid=3 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 11.667
