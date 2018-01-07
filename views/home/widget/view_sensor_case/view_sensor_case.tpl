@@ -26,6 +26,11 @@
 </div>
 
 <div class="fromone">
+    <label>传感器实例唯一标识：</label>
+    {{ sensor.uri }}_{{ sensor_case.id }}
+</div>
+
+<div class="fromone">
     <label>传感器实例别名：</label>
     <input type="text" id="alias" value="{{ sensor_case.alias }}" class="input" />
 </div>

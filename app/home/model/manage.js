@@ -25,6 +25,7 @@ const onSensor = async function(conf){
 
     const $fn = Fun.getFun($code);
     Fun.runFun({
+        space_time_id,
         FN: $fn,
         data: $data,
         status: $status,
@@ -41,6 +42,7 @@ const onStatus = async function(conf){
 
     const $fn = Fun.getFun($code);
     Fun.runFun({
+        space_time_id,
         FN: $fn,
         data: $data,
         status: $status,

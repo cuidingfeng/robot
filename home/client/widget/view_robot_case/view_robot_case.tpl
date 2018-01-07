@@ -12,7 +12,7 @@
 
 <div class="fromone">
     <label>机器人唯一标识：</label>
-    {{ robot.uri }}
+    {{ robot.robotId }}
 </div>
 
 <div class="fromone">
@@ -21,8 +21,19 @@
 </div>
 
 <div class="fromone">
+    <label>机器人通信地址：</label>
+    {{ robot.uri }}
+</div>
+
+
+<div class="fromone">
     <label>机器人介绍说明：</label>
     {{ robot.info }}
+</div>
+
+<div class="fromone">
+    <label>机器人实例唯一标识：</label>
+    {{ robot.robotId }}_{{ robot_case.id }}
 </div>
 
 <div class="fromone">

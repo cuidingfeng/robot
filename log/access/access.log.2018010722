@@ -1,0 +1,60 @@
+::ffff:127.0.0.1 - - [07/Jan/2018:22:00:09 ] "POST /home/robot/save_action HTTP/1.1" 200 381 http://127.0.0.1:8001/home/robot/view?id=3 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 10.571
+::ffff:127.0.0.1 - - [07/Jan/2018:22:00:09 ] "GET /home/robot/view?id=3 HTTP/1.1" 200 - http://127.0.0.1:8001/home/robot/view?id=3 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 8.597
+::ffff:127.0.0.1 - - [07/Jan/2018:22:26:01 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 3.548
+::ffff:127.0.0.1 - - [07/Jan/2018:22:26:01 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 6.824
+::ffff:127.0.0.1 - - [07/Jan/2018:22:26:06 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.770
+::ffff:127.0.0.1 - - [07/Jan/2018:22:26:06 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 2.924
+::ffff:127.0.0.1 - - [07/Jan/2018:22:26:08 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.766
+::ffff:127.0.0.1 - - [07/Jan/2018:22:26:08 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 2.769
+::ffff:127.0.0.1 - - [07/Jan/2018:22:27:04 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 2.812
+::ffff:127.0.0.1 - - [07/Jan/2018:22:27:04 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.800
+::ffff:127.0.0.1 - - [07/Jan/2018:22:27:15 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.758
+::ffff:127.0.0.1 - - [07/Jan/2018:22:27:15 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.131
+::ffff:127.0.0.1 - - [07/Jan/2018:22:27:16 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.758
+::ffff:127.0.0.1 - - [07/Jan/2018:22:27:16 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 2.805
+::ffff:127.0.0.1 - - [07/Jan/2018:22:28:03 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 3.053
+::ffff:127.0.0.1 - - [07/Jan/2018:22:28:03 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.831
+::ffff:127.0.0.1 - - [07/Jan/2018:22:29:24 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 2.813
+::ffff:127.0.0.1 - - [07/Jan/2018:22:29:24 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.800
+::ffff:127.0.0.1 - - [07/Jan/2018:22:29:55 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 3.957
+::ffff:127.0.0.1 - - [07/Jan/2018:22:29:55 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 7.746
+::ffff:127.0.0.1 - - [07/Jan/2018:22:30:28 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 3.896
+::ffff:127.0.0.1 - - [07/Jan/2018:22:30:28 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 9.875
+::ffff:127.0.0.1 - - [07/Jan/2018:22:31:15 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 2.958
+::ffff:127.0.0.1 - - [07/Jan/2018:22:31:15 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 7.297
+::ffff:127.0.0.1 - - [07/Jan/2018:22:31:51 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 2.809
+::ffff:127.0.0.1 - - [07/Jan/2018:22:31:51 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 6.456
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:42 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 1.020
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:42 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.428
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:47 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.734
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:47 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.043
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:51 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.811
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:51 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.374
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:58 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 1.463
+::ffff:127.0.0.1 - - [07/Jan/2018:22:32:58 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.387
+::ffff:127.0.0.1 - - [07/Jan/2018:22:33:09 ] "GET /space_time/rule?space_time_id=2&rule_id=7 HTTP/1.1" 200 - http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 40.624
+::ffff:127.0.0.1 - - [07/Jan/2018:22:33:09 ] "POST /home/space_time/getdata HTTP/1.1" 200 247 http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 5.779
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:00 ] "POST /home/rule/save_rule HTTP/1.1" 200 507 http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 9.151
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:00 ] "GET /space_time/rule?space_time_id=2&rule_id=7 HTTP/1.1" 200 - http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 19.491
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:00 ] "POST /home/space_time/getdata HTTP/1.1" 200 247 http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 1.070
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:04 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.869
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:04 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 4.255
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:07 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 1.439
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:07 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 4.002
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:12 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.726
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:12 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.422
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:14 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.724
+::ffff:127.0.0.1 - - [07/Jan/2018:22:34:14 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.558
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:40 ] "POST /home/rule/save_rule HTTP/1.1" 200 505 http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 7.073
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:40 ] "GET /space_time/rule?space_time_id=2&rule_id=7 HTTP/1.1" 200 - http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 12.959
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:40 ] "POST /home/space_time/getdata HTTP/1.1" 200 247 http://127.0.0.1:8001/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 1.186
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:47 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 0.715
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:47 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 2.576
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:49 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 1.203
+::ffff:127.0.0.1 - - [07/Jan/2018:22:37:49 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 3.149
+::ffff:127.0.0.1 - - [07/Jan/2018:22:38:34 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 3.292
+::ffff:127.0.0.1 - - [07/Jan/2018:22:38:34 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 6.393
+::ffff:127.0.0.1 - - [07/Jan/2018:22:38:36 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 1.935
+::ffff:127.0.0.1 - - [07/Jan/2018:22:38:36 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 4.305
+::ffff:127.0.0.1 - - [07/Jan/2018:22:38:38 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 1.565
+::ffff:127.0.0.1 - - [07/Jan/2018:22:38:38 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 4.052

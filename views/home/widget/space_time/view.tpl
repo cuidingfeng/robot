@@ -30,16 +30,16 @@
 {% for key, $case in sensor_case %}
 <div class="formBox">
     <div class="fromone">
-        <label>传感器实例ID：</label>
-        <a href="/home/space_time/view_sensor_case?scid={{$case.scid}}" target="_blank">{{ $case.scid }}</a>
+        <label>传感器实例别名：</label>
+        <a href="/home/space_time/view_sensor_case?scid={{$case.scid}}" target="_blank">{{ $case.alias }}</a>
     </div>
     <div class="fromone">
         <label>传感器名称：</label>
         <a href="/home/sensor/view?id={{$case.sid}}" target="_blank">{{ $case.title }}</a>
     </div>
     <div class="fromone">
-        <label>传感器标识：</label>
-        {{ $case.uri }}
+        <label>传感器实例标识：</label>
+        {{ $case.uri }}_{{$case.scid}}
     </div>
     <div class="fromone">
         <label>传感器协议：</label>
@@ -70,7 +70,7 @@
 {% for key, $robot_case in robot_case %}
 <div class="formBox">
     <div class="fromone">
-        <label>机器人实例ID：</label>
+        <label>机器人实例别名：</label>
         <a href="/home/space_time/view_robot_case?rcid={{$robot_case.rcid}}" target="_blank">{{ $robot_case.alias }}</a>
     </div>
     <div class="fromone">
@@ -78,8 +78,8 @@
         <a href="/home/robot/view?id={{$robot_case.rid}}" target="_blank">{{ $robot_case.title }}</a>
     </div>
     <div class="fromone">
-        <label>机器人标识：</label>
-        {{ $robot_case.robotId }}
+        <label>机器人实例标识：</label>
+        {{ $robot_case.robotId }}_{{$robot_case.rcid}}
     </div>
     <div class="fromone">
         <label>机器人协议：</label>
@@ -100,6 +100,7 @@
         <th>id</th>
         <th>名称</th>
         <th>标识</th>
+        <th>值</th>
         <th>操作</th>
     </tr>
 {% for key, $status in statusList %}
@@ -107,6 +108,7 @@
     <td>{{ $status.id }}</td>
     <td>{{ $status.title }}</td>
     <td>{{ $status.name }}</td>
+    <td>{{ $status.value }}</td>
     <td>
         <a href="./status?space_time_id={{space_time.id}}&status_id={{$status.id}}" target="_blank">查看</a>
         <a href="./del_status?status_id={{$status.id}}" confirm="true" ajax="true">删除</a>
@@ -116,7 +118,7 @@
 </table>
 
 <h2>所有规则</h2>
-<a href="./rule?space_time_id={{ space_time.id }}">添加新规则</a>
+<a href="./rule?space_time_id={{ space_time.id }}">查看规则</a>
 
 
 {% script %} require("home:widget/space_time/view.js")( {{ space_time.id }} ) {% endscript %}
