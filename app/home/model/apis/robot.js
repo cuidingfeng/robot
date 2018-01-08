@@ -1,4 +1,5 @@
 const db = require('../db').connection;
+const action = require('./action');
 
 module.exports = {
     getRobotCaseList: async (space_time_id) => {
@@ -6,9 +7,14 @@ module.exports = {
         let robot = {};
         list.map((rc)=>{
             robot[`${rc.robotId}_${rc.rcid}`] = robot[`${rc.robotId}_${rc.rcid}`] || {};
-            robot[`${rc.robotId}_${rc.rcid}`][`${rc.action}`] = function(...args){
-                console.log(`正在发送请求: url[${rc.uri}?action=${rc.action}&robot_case=${rc.rcid}]`);
-                console.log(`发送的参数：${JSON.stringify(args)}`)
+            robot[`${rc.robotId}_${rc.rcid}`][`${rc.action}`] = function(data){
+                action.run({
+                    robotUrl: rc.uri,
+                    action: rc.action,
+                    robot_case_id: rc.rcid,
+                    data: data,
+                    stype: rc.stype
+                });
             }
         });
         
@@ -25,7 +31,8 @@ const robotCases = (space_time_id) => {
                 robot_case.id as rcid, 
                 robot.robotId as robotId, 
                 robot_action.action_name as action,
-                robot.uri as uri 
+                robot.uri as uri,
+                robot.stype as stype
             from robot_case, robot_action, robot 
             where robot_case.stid=? and 
                 robot_case.rid=robot_action.robot_id and 

@@ -6,7 +6,6 @@ module.exports = {
     },
     runFun: async ({FN, data, status, type, space_time_id}) => {
         const $robot = await robot.getRobotCaseList(space_time_id);
-        console.log($robot,2);
         if(type == "status"){
             FN(data, data, status, $robot);
         }else{

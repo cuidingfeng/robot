@@ -1,0 +1,7 @@
+::ffff:127.0.0.1 - - [08/Jan/2018:21:24:56 ] "GET /home/space_time/rule?space_time_id=2&rule_id=7 HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 672.447
+::ffff:127.0.0.1 - - [08/Jan/2018:21:24:56 ] "POST /home/space_time/getdata HTTP/1.1" 200 247 http://127.0.0.1:8001/home/space_time/rule?space_time_id=2&rule_id=7 - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 8.245
+::ffff:127.0.0.1 - - [08/Jan/2018:21:25:23 ] "GET /space_time/view?id=2 HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 53.368
+::ffff:127.0.0.1 - - [08/Jan/2018:21:58:38 ] "GET /sensor/http HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 12.009
+::ffff:127.0.0.1 - - [08/Jan/2018:21:58:46 ] "POST /home/sensor/listen HTTP/1.1" 200 37 - - - 34.194
+::ffff:127.0.0.1 - - [08/Jan/2018:21:58:46 ] "GET /sensor/http/evchange?status=start HTTP/1.1" 304 - http://127.0.0.1:8001/sensor/http - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36 567.567
+::ffff:127.0.0.1 - - [08/Jan/2018:21:58:46 ] "POST /robot/http/main HTTP/1.1" 200 2 - - - 2.620
