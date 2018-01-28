@@ -1,5 +1,6 @@
 let sensor = require("../../model/sensor");
-let request = require("request");
+let execute = require("../../model/execute");
+
 
 module.exports.post = function (req, res) {
     Promise.all([
@@ -11,17 +12,16 @@ module.exports.post = function (req, res) {
         sensor.view(req.body.sensor_id),
         sensor.sensor_case(req.body.sensor_case_id)
     ]).then(([attr, edit, { sensor }, sensor_case]) => {
-        request.post(sensor[0].init_url, (error, response, body) => {
-            console.warn(body);
+        //通知传感器服务商
+        execute.initSensor({
+            sensor: sensor[0],
+            sensor_case: sensor_case,
+            attr
+        });
 
-            res.send(JSON.stringify({
-                attr,
-                edit
-            }));
-        }).
-            form({
-                secretKey: 'b89f8bdb3c42bbfb83ac181c767bd65d',
-                case_id: sensor_case.id
-            });
+        res.send(JSON.stringify({
+            attr,
+            edit
+        }));
     });
 };

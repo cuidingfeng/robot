@@ -68,6 +68,29 @@ module.exports.sensor_case = function (sensor_case_id) {
     });
 }
 
+module.exports.case_status = function (form) {
+    return db.then((conn) => {
+        console.log(form);
+        return conn.query(
+            'UPDATE sensor_case SET status = ? WHERE id=?',
+            [form.status, form.sensor_case_id]
+        )
+    }).then(([rows, fields]) => {
+        return rows[0];
+    });
+}
+
+module.exports.get_case_status = function (sensor_case_id) {
+    return db.then((conn) => {
+        return conn.query(
+            'select status from sensor_case where id=?',
+            sensor_case_id
+        )
+    }).then(([rows, fields]) => {
+        return rows[0].status;
+    });
+}
+
 module.exports.view = function (id) {
     return db.then((conn) => {
         return Promise.all([
@@ -105,16 +128,31 @@ module.exports.save_sensor_case_attr = function (data) {
     return save_sensor_case_attr(data);
 };
 
+const get_sensor_case_attr = module.exports.get_sensor_case_attr = function (sensor_case_id) {
+    return db.then((conn) => {
+        return conn.query(
+            'select sensor_case_attr.*, sensor_attr.attr_name, sensor_attr.title  from sensor_case_attr, sensor_attr where sensor_case_attr.scid=? and sensor_case_attr.said=sensor_attr.id',
+            sensor_case_id
+        ).then(([rows, fields]) => {
+            return rows;
+        });
+    });
+};
+
 const save_sensor_case_attr = function (data) {
     let conn;
     let { sensor_case_id, datas } = data;
     return db.then((_conn) => {
         conn = _conn;
+        let prms = [];
         JSON.parse(datas).forEach(element => {
             element.scid = sensor_case_id;
-            save_one_case_attr(conn, element);
+            prms.push( save_one_case_attr(conn, element) );
         });
-        return true;
+
+        return Promise.all(prms).then(function(){
+            return get_sensor_case_attr(sensor_case_id);
+        });
     });
 };
 
@@ -124,7 +162,6 @@ const save_one_case_attr = function (conn, data) {
         'select * from sensor_case_attr where scid=? and said=?',
         [data.scid, data.said]
     ).then(([rows, fields]) => {
-        console.log(rows);
         if (rows.length > 0) {
             //如果已经存在就修改，否则就添加。
             return conn.query(

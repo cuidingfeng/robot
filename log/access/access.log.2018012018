@@ -1,0 +1,5 @@
+::ffff:127.0.0.1 - - [20/Jan/2018:18:23:16 ] "GET /home/ HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 7.387
+::ffff:127.0.0.1 - - [20/Jan/2018:18:23:20 ] "GET /home/sensor/create HTTP/1.1" 200 - http://127.0.0.1:8001/home/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 7.491
+::ffff:127.0.0.1 - - [20/Jan/2018:18:23:26 ] "GET /home/sensor/list HTTP/1.1" 200 - http://127.0.0.1:8001/home/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 8.374
+::ffff:127.0.0.1 - - [20/Jan/2018:18:23:51 ] "GET /home/sensor/create HTTP/1.1" 200 - http://127.0.0.1:8001/home/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 4.321
+::ffff:127.0.0.1 - - [20/Jan/2018:18:28:14 ] "POST /home/sensor/save_sensor HTTP/1.1" 200 260 http://127.0.0.1:8001/home/sensor/create - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 9.721

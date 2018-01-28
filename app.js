@@ -16,8 +16,11 @@ var app = yog.bootstrap({
 app.set('port', process.env.PORT || 8001);
 app.disable('x-powered-by');
 
+var sensorload = require("./app/sensor/model/serverload");
+
 var server = yog.server = app.listen(app.get('port'), function () {
     console.log('Yog server listening on port ' + server.address().port);
+    sensorload();
 });
 
 server.on('connection', function (socket) {

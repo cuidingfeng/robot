@@ -9,9 +9,10 @@ module.exports = function(req, res){
 module.exports.local = function(req){
     //console.log("this is local listen: " + JSON.stringify(req));
     manage.on({
-        "evType": "local",
-        "namespace": req.sensorName,
-        "evId": req.evName,
+        "stype": "local",
+        "evType": req.evType,
+        "sensor_case_id": req.sensor_case_id,
+        "eventName": req.eventName,
         "data": req.data,
         "req": req
     });

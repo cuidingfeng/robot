@@ -54,7 +54,8 @@
     {% endfor %}
 </div>
 
-<button id="create_btn" class="formBtn" data-from="{{ from }}">确定</button>
+<button id="create_btn" class="formBtn">保存数据</button>
+<button id="scStatus" class="formBtn" data-status="{{ sensor_case.status }}">将它{{ sensor_case.newStutusName }}</button>
 
 
 {% script %} 

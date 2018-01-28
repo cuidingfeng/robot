@@ -12,6 +12,20 @@ $("#create_btn").click(function(){
     saveAttr(from);
 });
 
+$("#scStatus").click(function(){
+    var status = +$(this).data("status");
+    $.ajax("/home/sensor/case_status", {
+        data: {
+            status: +!status,
+            sensor_case_id
+        },
+        dataType: "json",
+        type: "post"
+    }).then(function(data){
+        location.reload();
+    });
+});
+
 const saveAttr = function(from){
     let datas = [];
     let alias = $("#alias").val();

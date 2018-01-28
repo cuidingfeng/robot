@@ -1,0 +1,3 @@
+::ffff:127.0.0.1 - - [28/Jan/2018:18:24:59 ] "GET / HTTP/1.1" 200 - - - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 59.711
+::ffff:127.0.0.1 - - [28/Jan/2018:18:25:04 ] "GET /space_time/list HTTP/1.1" 200 - http://127.0.0.1:8001/ - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 25.808
+::ffff:127.0.0.1 - - [28/Jan/2018:18:25:10 ] "GET /space_time/view?id=2 HTTP/1.1" 200 - http://127.0.0.1:8001/space_time/list - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3298.4 Safari/537.36 35.360

@@ -1,7 +1,8 @@
 /*接收标准的事件数据，根据用户设置，处理数据，然后按标准格式发送给机器人大厅*/
 
 const lodash = require("lodash");
-let execute = require("./execute");
+let execute = require("./execute"),
+    sensor = require("./sensor");
 let Tree = {};
 
 const { getSpaceTimeId, getRule, getStatus } = require("./apis/main");
@@ -9,7 +10,11 @@ const Fun = require("./apis/fun");
 
 module.exports.on = async function (conf) {
     if(conf.evType == "sensor"){
-        await onSensor(conf);
+        const case_status = await sensor.get_case_status(conf.sensor_case_id);
+        //传感器实例已经启用
+        if(case_status == 1){
+            await onSensor(conf);
+        }
     }
     if(conf.evType == "status"){
         await onStatus(conf);

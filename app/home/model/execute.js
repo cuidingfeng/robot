@@ -1,3 +1,5 @@
+let request = require("request");
+
 module.exports.exec = function(robotName, data){
     if(getRobotType(robotName) === 'local'){
         localRobot(robotName, data);
@@ -16,4 +18,24 @@ const getRobotType = function(name){
         return "local"
     }
     return "";
+};
+
+module.exports.initSensor = function({sensor, sensor_case, attr}){
+    let $attr = {};
+    attr.map((that) => {
+        $attr[that.attr_name] = that.value
+    });
+    if(sensor.stype == "http"){
+        request.post(sensor.init_url, (error, response, body) => {
+            console.warn(body);
+        }).form({
+                secretKey: sensor.secretKey,
+                case_id: sensor_case.id,
+                attr: $attr
+            });
+    }else if(sensor.stype == "local"){
+        let sensorMain = require("../../sensor/action/" + sensor.init_url);
+        sensorMain({sensor, sensor_case, attr: $attr});
+    }
+    
 };

@@ -18,6 +18,7 @@ module.exports.get = function (req, res) {
                             attr.case_value = case_attr.case_value;
                         }
                     });
+                    $sensor_case.newStutusName = util.case_status($sensor_case.status, true);
                     res.render('home/page/space_time/view_sensor_case.tpl', {
                         sensor_id: sensor_id,
                         space_time_id: space_time_id,
