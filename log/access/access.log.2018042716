@@ -1,0 +1,2 @@
+::1 - - [27/Apr/2018:16:06:26 ] "POST /home/space_time/save_sensor_case HTTP/1.1" 200 338 http://localhost:8001/home/space_time/view_sensor_case?scid=14 - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 13.686
+::1 - - [27/Apr/2018:16:10:03 ] "GET /home/sensor/view?id=36 HTTP/1.1" 200 - http://localhost:8001/space_time/view?id=2 - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36 11.959

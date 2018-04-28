@@ -68,18 +68,6 @@ module.exports.sensor_case = function (sensor_case_id) {
     });
 }
 
-module.exports.case_status = function (form) {
-    return db.then((conn) => {
-        console.log(form);
-        return conn.query(
-            'UPDATE sensor_case SET status = ? WHERE id=?',
-            [form.status, form.sensor_case_id]
-        )
-    }).then(([rows, fields]) => {
-        return rows[0];
-    });
-}
-
 module.exports.get_case_status = function (sensor_case_id) {
     return db.then((conn) => {
         return conn.query(
@@ -116,6 +104,29 @@ module.exports.view = function (id) {
     });
 };
 
+const get_sensor_one = module.exports.get_sensor_one = function ({ sid, scid }) {
+    if (sid) {
+        return db.then((conn) => {
+            return conn.query(
+                'select * from sensor where id=?',
+                sid
+            )
+        }).then(([sensor]) => {
+            return sensor[0];
+        });
+    } else if (scid) {
+        return db.then((conn) => {
+            return conn.query(
+                'select sid from sensor_case where id=?',
+                scid
+            )
+        }).then(([sensor_case]) => {
+            return get_sensor_one({ sid: sensor_case[0].sid });
+        });
+    }
+
+};
+
 module.exports.save_sensor_case = function (data) {
     return save_sensor_case(data);
 };
@@ -147,10 +158,10 @@ const save_sensor_case_attr = function (data) {
         let prms = [];
         JSON.parse(datas).forEach(element => {
             element.scid = sensor_case_id;
-            prms.push( save_one_case_attr(conn, element) );
+            prms.push(save_one_case_attr(conn, element));
         });
 
-        return Promise.all(prms).then(function(){
+        return Promise.all(prms).then(function () {
             return get_sensor_case_attr(sensor_case_id);
         });
     });
@@ -177,7 +188,7 @@ const save_one_case_attr = function (conn, data) {
     });
 };
 
-const save_sensor_case = function (data,) {
+const save_sensor_case = function (data, ) {
     let conn;
     return db.then((_conn) => {
         conn = _conn;
@@ -216,7 +227,7 @@ const createone = function (data) {
         conn = _conn;
         return conn.query(
             'select uri from sensor where uri=? or title=?',
-            [ data.uri, data.title ]
+            [data.uri, data.title]
         )
     }).then(([rows, fields]) => {
         if (rows.length > 0) {
@@ -244,7 +255,7 @@ const createAttr = function (data) {
         conn = _conn;
         return conn.query(
             'select * from sensor_attr where sensor_id=? and ( attr_name=? or title=? )',
-            [ data.sensor_id, data.attr_name, data.title ]
+            [data.sensor_id, data.attr_name, data.title]
         )
     }).then(([rows, fields]) => {
         if (rows.length > 0) {
@@ -272,7 +283,7 @@ const createEvent = function (data) {
         conn = _conn;
         return conn.query(
             'select * from sensor_event where sensor_id=? and ( event_name=? or title=? )',
-            [ data.sensor_id, data.event_name, data.title ]
+            [data.sensor_id, data.event_name, data.title]
         )
     }).then(([rows, fields]) => {
         if (rows.length > 0) {

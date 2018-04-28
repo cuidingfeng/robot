@@ -17,9 +17,8 @@ if (fis.IS_FIS3) {
     fis.media('debug').match('*', {
         optimizer: null,
         useHash: false,
-        deploy: fis.plugin('http-push', {
-            receiver: 'http://127.0.0.1:8001/yog/upload',
-            to: '/'
+        deploy: fis.plugin('local-deliver', {
+            to: '../'
         })
     });
     fis.media('debug-prod').match('*', {

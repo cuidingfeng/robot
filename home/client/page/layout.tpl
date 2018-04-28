@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="/static/favicon.ico">
-        <title>{{ title || '智能生活机器' }}</title>
+        <title>{{ title || '智能办公' || '智能生活机器' }}</title>
         {% require "home:static/css/public.css" %}
         {% require "home:components/jquery/jquery.js" %}
     {% endhead %}

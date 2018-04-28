@@ -57,6 +57,7 @@
         {% endfor %}
     </div>
     <div>
+        <a href="/home/space_time/status_sensor_case?scid={{$case.scid}}&status={{$case.status}}" ajax="true">{{['启用','停用'][$case.status]}}</a>
         <a href="/home/space_time/view_sensor_case?scid={{$case.scid}}" target="_blank">编辑</a>
         <a href="/home/space_time/del_sensor?scid={{$case.scid}}" confirm="true" ajax="true">删除</a>
     </div>

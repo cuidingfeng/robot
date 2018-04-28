@@ -21,7 +21,37 @@ module.exports.SaveCase = function (json) {
                 )
             }
         }).then(([rows, fields]) => {
-            onEvent(json.sensor_case_id, json.formatStr);
+            getOne({ scid: json.sensor_case_id }).then((rs) => {
+                onEvent(rs.sensor_case_id, rs.formatStr, rs.status);
+            });
+        });
+    });
+};
+
+const getOne = function ({ scid }) {
+    return db.then((conn) => {
+        return conn.query(
+            'select * from datetime WHERE sensor_case_id=?',
+            scid
+        ).then(([rows, fields]) => {
+            return rows[0];
+        });
+    });
+};
+
+module.exports.CaseStatus = function (json) {
+    return db.then((conn) => {
+        return conn.query(
+            'UPDATE datetime SET status = ? WHERE sensor_case_id=?',
+            [json.status, json.sensor_case_id]
+        ).then(([rows, fields]) => {
+            if (json.status == 1) {
+                getOne({ scid: json.sensor_case_id }).then((rs) => {
+                    onEvent(rs.sensor_case_id, rs.formatStr, 1);
+                });
+            } else {
+                onEvent(json.sensor_case_id, '', 0);
+            }
         });
     });
 };
@@ -37,18 +67,19 @@ const getAllrules = () => {
 module.exports.onLoad = () => {
     getAllrules().then(([rules]) => {
         rules.map((rule) => {
-            onEvent(rule.sensor_case_id, rule.formatStr);
+            onEvent(rule.sensor_case_id, rule.formatStr, rule.status);
         });
     });
 };
 
-const onEvent = function(scid, formatStr){
-    
-    if (schedule.scheduledJobs[scid+""]) {
-        var result = schedule.cancelJob(scid+"");
+const onEvent = function (scid, formatStr, status = 1) {
+
+    if (schedule.scheduledJobs[scid + ""]) {
+        var result = schedule.cancelJob(scid + "");
     }
-    
-    var mysche = schedule.scheduleJob(scid+"", formatStr, function(){  
+    if (status === 0) return;
+    var mysche = schedule.scheduleJob(scid + "", formatStr, function () {
+        console.log("传感器datetime发送事件", Date.now());
         exxcute.send({
             "eventName": "ontime",
             "sensor_case_id": scid,

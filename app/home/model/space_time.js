@@ -1,5 +1,7 @@
 const db = require('./db').connection,
-    util = require("../lib/util");
+    util = require("../lib/util"),
+    sensor = require("./sensor"),
+    execute = require("./execute");
 
 module.exports.save = function (data, type) {
     if (type === 'create') {
@@ -18,9 +20,9 @@ module.exports.save_robot_case = function (data) {
 
 
 module.exports.saveStatus = function (data, status_id) {
-    if(status_id){
+    if (status_id) {
         return updateStatus(data, status_id);
-    }else{
+    } else {
         return createStatus(data);
     }
 };
@@ -179,6 +181,29 @@ module.exports.db_sensor_case = (scid) => {
         )
     }).then(([rs]) => {
         return rs[0]
+    });
+};
+
+module.exports.status_sensor_case = async function (scid, status) {
+    status = status == 0 ? 1 : 0;
+    return db.then((conn) => {
+        return conn.query(
+            'update sensor_case set status=? where id=?',
+            [status, scid]
+        )
+    }).then(([rs]) => {
+        //传感器启用状态改变，通知传感器服务商
+        Promise.all([
+            sensor.get_sensor_one({ scid }),
+            sensor.sensor_case(scid)
+        ]).then(([sensor, sensor_case]) => {
+            execute.initSensor({
+                sensor,
+                sensor_case,
+                status
+            });
+        });
+        return "ok"
     });
 };
 
