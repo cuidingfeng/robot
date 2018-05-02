@@ -8,6 +8,12 @@
             "type": "shell",
             "command": "yog2 run",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "release",
+            "path": "home/",
+            "problemMatcher": []
         }
     ]
 }

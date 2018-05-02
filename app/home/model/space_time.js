@@ -200,7 +200,8 @@ module.exports.status_sensor_case = async function (scid, status) {
             execute.initSensor({
                 sensor,
                 sensor_case,
-                status
+                status,
+                action: "status"
             });
         });
         return "ok"
@@ -219,19 +220,32 @@ module.exports.db_robot_case = (rcid) => {
 };
 
 module.exports.del_sensor = (scid) => {
-    return db.then((conn) => {
-        conn.query(
-            'delete from sensor_case where id=?',
-            scid
-        );
-        conn.query(
-            'delete from sensor_case_attr where scid=?',
-            scid
-        );
-        return "ok"
-    }).then((status) => {
-        return status
+    //传感器启用状态改变，通知传感器服务商
+    return Promise.all([
+        sensor.get_sensor_one({ scid }),
+        sensor.sensor_case(scid)
+    ]).then(([sensor, sensor_case]) => {
+        
+        return db.then((conn) => {
+            conn.query(
+                'delete from sensor_case where id=?',
+                scid
+            );
+            conn.query(
+                'delete from sensor_case_attr where scid=?',
+                scid
+            );
+            return "ok"
+        }).then((status) => {
+            execute.initSensor({
+                sensor,
+                sensor_case,
+                action: "delete"
+            });
+            return status
+        });
     });
+    
 };
 
 module.exports.del_robot = (rcid) => {

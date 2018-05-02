@@ -56,6 +56,17 @@ module.exports.CaseStatus = function (json) {
     });
 };
 
+module.exports.DeleteCase = function (json) {
+    return db.then((conn) => {
+        return conn.query(
+            'delete from datetime WHERE sensor_case_id=?',
+            json.sensor_case_id
+        ).then(([rows, fields]) => {
+            onEvent(json.sensor_case_id, '', 0);
+        });
+    });
+};
+
 const getAllrules = () => {
     return db.then((conn) => {
         return conn.query(
@@ -79,7 +90,7 @@ const onEvent = function (scid, formatStr, status = 1) {
     }
     if (status === 0) return;
     var mysche = schedule.scheduleJob(scid + "", formatStr, function () {
-        console.log("传感器datetime发送事件", Date.now());
+        console.log(`传感器id=${scid}, datetime发送事件`, new Date().toLocaleString());
         exxcute.send({
             "eventName": "ontime",
             "sensor_case_id": scid,

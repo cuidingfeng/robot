@@ -20,7 +20,7 @@ const getRobotType = function (name) {
     return "";
 };
 
-module.exports.initSensor = function ({ sensor, sensor_case, attr = [], status }) {
+module.exports.initSensor = function ({ sensor, sensor_case, attr = [], status, action }) {
     let $attr = {};
     attr.map((that) => {
         $attr[that.attr_name] = that.value
@@ -32,11 +32,12 @@ module.exports.initSensor = function ({ sensor, sensor_case, attr = [], status }
             secretKey: sensor.secretKey,
             case_id: sensor_case.id,
             attr: $attr,
-            status
+            status,
+            action
         });
     } else if (sensor.stype == "local") {
         let sensorMain = require("../../sensor/action/" + sensor.init_url);
-        sensorMain({ sensor, sensor_case, attr: $attr, status });
+        sensorMain({ sensor, sensor_case, attr: $attr, status, action });
     }
 
 };

@@ -16,7 +16,8 @@ module.exports.post = function (req, res) {
         execute.initSensor({
             sensor: sensor[0],
             sensor_case: sensor_case,
-            attr
+            attr,
+            action: "edit"
         });
 
         res.send(JSON.stringify({
