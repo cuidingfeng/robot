@@ -1,5 +1,6 @@
 # Logs
 logs
+log
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -57,3 +58,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# Release
+/app
+/views
+/static
